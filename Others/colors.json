@@ -1,0 +1,98 @@
+{
+    "a1" : {
+        "name": "Black",
+        "value": "#000000"
+    },
+    "a2" : {
+        "name": "Grey 700",
+        "value": "#5f6368"
+    },
+    "a3" : {
+        "name": "Grey 500",
+        "value": "#9aa0a6"
+    },
+    "a4" : {
+        "name": "Grey 300",
+        "value": "#dadce0"
+    },
+    "a5" : {
+        "name": "Grey 100",
+        "value": "#f1f3f4"
+    },
+    "a6" : {
+        "name": "White",
+        "value": "#ffffff"
+    },
+    "a7" : {
+        "name": "Red 300",
+        "value": "#f28b82"
+    },
+    "a8" : {
+        "name": "Yellow 300",
+        "value": "#fdd663"
+    },
+    "a9" : {
+        "name": "Green 300",
+        "value": "#81c995"
+    },
+    "a10" : {
+        "name": "Cyan 300",
+        "value": "#78d9ec"
+    },
+    "a11" : {
+        "name": "Blue 300",
+        "value": "#8ab4f8"
+    },
+    "a12" : {
+        "name": "Purple 300",
+        "value": "#c58af9"
+    },
+    "a13" : {
+        "name": "Red 500",
+        "value": "#ea4335"
+    },
+    "a14" : {
+        "name": "Yellow 500",
+        "value": "#fbbc04"
+    },
+    "a15" : {
+        "name": "Green 500",
+        "value": "#34a853"
+    },
+    "a16" : {
+        "name": "Cyan 500",
+        "value": "#24c1e0"
+    },
+    "a17" : {
+        "name": "Blue 500",
+        "value": "#4285f4"
+    },
+    "a18" : {
+        "name": "Purple 500",
+        "value": "#a142f4"
+    },
+    "a19" : {
+        "name": "Red 700",
+        "value": "#c5221f"
+    },
+    "a20" : {
+        "name": "Yellow 700",
+        "value": "#f29900"
+    },
+    "a21" : {
+        "name": "Green 700",
+        "value": "#188038"
+    },
+    "a22" : {
+        "name": "Cyan 700",
+        "value": "#12a4af"
+    },
+    "a23" : {
+        "name": "Blue 700",
+        "value": "#1967d2"
+    },
+    "a24" : {
+        "name": "Purple 700",
+        "value": "#8430ce"
+    }
+}

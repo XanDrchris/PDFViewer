@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+:root {
+    --body-back-clr: #d4d4d7;
+    --toolbar-icon-opacity: 1;
+    --button-back-hover: #ffffff29;
+    --split-back-color: #ffffff4d;
+    --dropdown-back: #eaeaea;
+    --docum-theme: #000;
+    --button-spacer-clr: #0006;
+    --toggle-back-clr: #69696926;
+    --sidebar-width: 215px;
+    --ink-color: #000;
+    --pen-tip-fill: #000;
+}
+
+body {
+    background-color: var(--body-back-clr);
+}
+
+.myDiv1 {
+    display: flex;
+    gap: 3px;
+}
+
+.fileNameV {
+    color: var(--docum-theme);
+}
+
+input[type='range'] {
+    accent-color: #8ab4f8;
+    height: 3px;
+}
+
+.clrOpa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opaThk {
+    display: none;
+    inset-inline-end: 93px;
+}
+
+.editorParamsSet {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 130px;
+    gap: 25px;
+}
+
+#toolbarContainer {
+    height: 45px;
+    box-shadow: none;
+    border-bottom: 0.3px solid var(--toolbar-border-color);
+    font-family: 'Ubuntu', sans-serif;
+    user-select: none;
+}
+
+#toolbarViewer {
+    display: grid;
+    height: 45px;
+    align-items: center;
+    padding: 0 16px;
+    grid-template-columns: 92px 15px 109px auto 180px 115px;
+}
+
+#toolbarViewerLeft {
+    padding-inline-start: 10px;
+}
+
+#toolbarViewerMiddle {
+    position: initial;
+    transform: none;
+}
+
+#toolbarViewerRight {
+    margin-left: auto;
+    padding-inline-end: 12px;
+}
+
+#sidebarContainer {
+    inset-block: 45px 0;
+}
+
+#toolbarSidebar {
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+
+#sidebarContent {
+    background-color: var(--toolbar-bg-color);
+    inset-block: 38px 0;
+}
+
+.toolbarButton {
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 150ms;
+    margin: 0;
+    padding: 0;
+    width: 33px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolbarButton:is(:hover, :focus-visible) {
+    background-color: #0000;
+}
+
+:is(.toolbarButton, .secondaryToolbarButton, .treeItemToggler)::before,
+.dropdownToolbarButton::after {
+    width: 20px;
+    height: 20px;
+}
+
+#loadingBar {
+    opacity: 0;
+}
+
+#viewerContainer {
+    inset: 45px 0 0;
+}
+
+.splitToolbarButtonSeparator {
+    width: 20px;
+    height: 1px;
+    margin: 0;
+    background-color: var(--button-spacer-clr);
+}
+
+.splitToolbarButton {
+    margin: 0 6px;
+}
+
+.toolbarButtonSpacer {
+    width: 1px;
+    height: 20px;
+    margin-left: 14px;
+    background-color: var(--button-spacer-clr);
+}
+
+#toolbarSidebar .splitToolbarButton>.toolbarButton {
+    margin-inline-end: 5px;
+}
+
+.verticalToolbarSeparator {
+    margin: 5px 6px;
+    background-color: var(--split-back-color);
+}
+
+.dropdownToolbarButton>select {
+    background-color: var(--dropdown-back);
+}
+
+.toolbarField {
+    border-radius: 7px;
+    background-color: var(--dropdown-back);
+    cursor: auto;
+}
+
+#pageNumber {
+    width: 30px;
+    text-align: center;
+}
+
+.toolbarField:hover {
+    background-color: var(--dropdown-back);
+}
+
+.toolbarLabel {
+    margin: -10px 0;
+}
+
+.findbar {
+    top: 45px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.mainToolbarImage {
+    opacity: 0.75;
+}
+
+:is(#openFile, #secondaryOpenFile)::before {
+    -webkit-mask-image: none;
+    mask-image: none;
+}
+
+:is(.toolbarButton, .secondaryToolbarButton, .treeItemToggler)::before,
+.dropdownToolbarButton::after {
+    width: auto;
+    height: auto;
+}
+
+.toolbarButtonImage {
+    width: 20px;
+}
+
+.toolbarButton:hover .mainToolbarImage {
+    opacity: 1;
+}
+
+.mainToolbar {
+    position: fixed;
+    right: 0;
+    height: -webkit-fill-available;
+    width: 45px;
+    background-color: var(--toolbar-bg-color);
+    border-left: 0.3px solid var(--toolbar-border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 0;
+    gap: 10px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.cName {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+}
+
+.myToolBar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.writtenTool:hover {
+    background-color: #0000;
+}
+
+.editorToolBar {
+    position: absolute;
+    z-index: 30000;
+    top: 50px;
+    inset-inline-end: 48.5px;
+    background-color: var(--toolbar-bg-color);
+    display: flex;
+    gap: 10px;
+    padding: 10px 5px;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.editorParamsToolbar {
+    top: 83px;
+    padding: 15px;
+    background-color: var(--toolbar-bg-color);
+}
+
+#editorInkParamsToolbar {
+    inset-inline-end: 92px;
+}
+
+.editorParamsColor {
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#editorFreeTextParamsToolbar {
+    inset-inline-end: 92px;
+}
+
+input[type="color" i]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 50%;
+}
+
+input[type="color" i]::-webkit-color-swatch {
+    border-radius: 50%;
+    border: none;
+}
+
+.secondaryToolbar {
+    bottom: 3px;
+    inset-inline-end: 50px;
+    top: auto;
+    background-color: var(--toolbar-bg-color);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:is(.doorHanger, .doorHangerRight)::after,
+:is(.doorHanger, .doorHangerRight)::before {
+    display: none;
+    bottom: 15px;
+    transform: rotate(90deg);
+}
+
+.dIfaC {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.doorHangerRight::before {
+    inset-inline-end: -10px;
+    margin-inline-end: -8px;
+}
+
+.doorHangerRight::after {
+    inset-inline-end: -9px;
+    margin-inline-end: -7px;
+}
+
+:is(.toolbar, .editorParamsToolbar, .findbar, #sidebarContainer) :is(input, button, select),
+.secondaryToolbar :is(input, button, a, select) {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:is(.toolbarButton, .secondaryToolbarButton).toggled,
+.splitToolbarButton.toggled>.toolbarButton.toggled {
+    background-color: var(--toggle-back-clr);
+}
+
+.thumbnail {
+    padding: 0;
+    margin-left: 20px;
+}
+
+.opaClr {
+    inset-inline-end: 93px;
+    background-color: var(--toolbar-bg-color);
+    display: none;
+}
+
+.opaClrDv2 {
+    margin-top: 20px;
+    border-radius: 18px;
+    background-color: #ffffff1a;
+}
+
+.choosePlt {
+    width: 144px;
+    border-radius: 18px;
+    height: 36px;
+    background-color: transparent;
+    border: none;
+    color: var(--docum-theme);
+    cursor: pointer;
+}
+
+.btnSlcTd {
+    background-color: #8ab4f8;
+    color: #000;
+}
+
+.clrPallate {
+    padding-top: 20px;
+}
+
+.clrPallate2 {
+    display: grid;
+    grid-auto-rows: 48px;
+    grid-template-columns: repeat(6, 48px);
+}
+
+.colorItem {
+    -webkit-tap-highlight-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    height: 48px;
+    width: 48px;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.colorItemInp {
+    -webkit-appearance: none;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.colorItemInpSlc {
+    width: 36px;
+    height: 36px;
+}
+
+.thumbnail.selected {
+    border-color: #8ab4f8 !important;
+}
+
+.editorParamsLabel {
+    color: var(--docum-theme);
+}
+
+.clrPicker {
+    margin-top: 20px;
+}
+
+.alwan {
+    border: none;
+    max-width: 288px;
+    background-color: transparent;
+}
+
+.alwan__palette {
+    height: 192px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.alwan__marker {
+    width: 24px;
+    height: 24px;
+    box-shadow: 0 0 0 4px #fff;
+    border: none;
+}
+
+.alwan__palette:focus .alwan__marker {
+    box-shadow: 0 0 0 4px #fff;
+}
+
+.alwan__container {
+    padding: 0;
+    margin-top: 35px;
+}
+
+.alwan__slider--hue::-webkit-slider-runnable-track {
+    border-radius: 8px;
+    height: 24px;
+}
+
+.alwan__slider::-webkit-slider-thumb {
+    margin-top: 1px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 0 0 0 4px #fff;
+    width: 24px;
+    height: 24px;
+}
+
+.alwan__input {
+    margin-top: 20px;
+    background-color: #0000004d;
+    height: 30px;
+    border-radius: 4px;
+    caret-color: #8ab4f8;
+    font-size: 13px;
+    border: none;
+    transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.alwan__inputs>label {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.alwan__inputs>label>span {
+    position: absolute;
+    font-size: 10px;
+    text-transform: capitalize;
+}
+
+.alwan__button {
+    display: none;
+}
+
+@media(prefers-color-scheme:dark) {
+    :root {
+        --body-back-clr: #525659;
+        --dropdown-back: #262626;
+        --docum-theme: #fff;
+        --toolbar-border-color: #666666;
+        --button-spacer-clr: #ffffff45;
+        --toggle-back-clr: #ffffff26;
+    }
+}

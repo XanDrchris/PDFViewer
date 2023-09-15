@@ -1,0 +1,668 @@
+  <div id="outerContainer">
+
+    <div id="sidebarContainer">
+      <div id="toolbarSidebar">
+        <div id="toolbarSidebarLeft">
+          <div id="sidebarViewButtons" class="splitToolbarButton toggled" role="radiogroup">
+            <button id="viewThumbnail" class="toolbarButton toggled" title="Show Thumbnails" tabindex="2"
+              data-l10n-id="thumbs" role="radio" aria-checked="true" aria-controls="thumbnailView">
+              <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" role="none"
+                style="width:18px;fill:var(--docum-theme);" class="mainToolbarImage">
+                <g>
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z">
+                  </path>
+                </g>
+              </svg>
+            </button>
+            <button id="viewOutline" class="toolbarButton"
+              title="Show Document Outline (double-click to expand/collapse all items)" tabindex="3"
+              data-l10n-id="document_outline" role="radio" aria-checked="false" aria-controls="outlineView">
+              <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" role="none"
+                style="width:18px;fill:var(--docum-theme);" class="mainToolbarImage">
+                <g>
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M19 5v14H5V5h14m1.1-2H3.9c-.5 0-.9.4-.9.9v16.2c0 .4.4.9.9.9h16.2c.4 0 .9-.5.9-.9V3.9c0-.5-.5-.9-.9-.9zM11 7h6v2h-6V7zm0 4h6v2h-6v-2zm0 4h6v2h-6zM7 7h2v2H7zm0 4h2v2H7zm0 4h2v2H7z">
+                  </path>
+                </g>
+              </svg>
+            </button>
+            <button id="viewAttachments" class="toolbarButton" title="Show Attachments" tabindex="4"
+              data-l10n-id="attachments" role="radio" aria-checked="false" aria-controls="attachmentsView">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="none"
+                class="mainToolbarImage">
+                <path
+                  d="M3.5 3.75C3.5 1.67879 5.17879 0 7.25 0C9.32121 0 11 1.67879 11 3.75V10.25C11 11.4922 9.99221 12.5 8.75 12.5C7.50779 12.5 6.5 11.4922 6.5 10.25V3.5H8V10.25C8 10.6638 8.33621 11 8.75 11C9.16379 11 9.5 10.6638 9.5 10.25V3.75C9.5 2.50721 8.49279 1.5 7.25 1.5C6.00721 1.5 5 2.50721 5 3.75V10.75C5 12.8208 6.67921 14.5 8.75 14.5C10.8208 14.5 12.5 12.8208 12.5 10.75V3.5H14V10.75C14 13.6492 11.6492 16 8.75 16C5.85079 16 3.5 13.6492 3.5 10.75V3.75Z"
+                  fill="var(--docum-theme)" />
+              </svg>
+            </button>
+            <button id="viewLayers" class="toolbarButton"
+              title="Show Layers (double-click to reset all layers to the default state)" tabindex="5"
+              data-l10n-id="layers" role="radio" aria-checked="false" aria-controls="layersView">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="none"
+                class="mainToolbarImage">
+                <path
+                  d="M8.36645 2.34562C8.13878 2.21813 7.86122 2.21813 7.63355 2.34562L1.38355 5.84562C1.14669 5.97826 1 6.22853 1 6.5C1 6.77147 1.14669 7.02174 1.38355 7.15438L7.63355 10.6544C7.86122 10.7819 8.13878 10.7819 8.36645 10.6544L14.6165 7.15438C14.8533 7.02174 15 6.77147 15 6.5C15 6.22853 14.8533 5.97826 14.6165 5.84562L8.36645 2.34562ZM8 9.14041L3.28499 6.5L8 3.85959L12.715 6.5L8 9.14041ZM1.63647 9.0766L7.99999 12.6404L14.3255 9.09761L15.0585 10.4063L8.36649 14.1543C8.13881 14.2818 7.86122 14.2819 7.63353 14.1543L0.903534 10.3853L1.63647 9.0766Z"
+                  fill="var(--docum-theme)" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="toolbarSidebarRight">
+          <div id="outlineOptionsContainer" class="hidden">
+            <div class="verticalToolbarSeparator"></div>
+
+            <button id="currentOutlineItem" class="toolbarButton" disabled="disabled" title="Find Current Outline Item"
+              tabindex="6" data-l10n-id="current_outline_item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16" fill="none"
+                class="mainToolbarImage">
+                <path
+                  d="M10.803 4.74998V6.02436C10.803 6.39302 10.3571 6.57793 10.0967 6.31753L7.87716 4.098C7.71566 3.93649 7.71566 3.67434 7.87716 3.51283L10.0967 1.29329C10.3571 1.0329 10.8036 1.21722 10.8036 1.58588V3.24998H15V4.74998H10.803ZM8 1.24998H3V2.74998H6.5L8 1.24998ZM6.5 5.24998H3V6.74998H8L6.5 5.24998ZM3 13.25H15V14.75H3V13.25ZM6 9.24998H15V10.75H6V9.24998ZM1.5 5.24998H0V6.74998H1.5V5.24998ZM0 13.25H1.5V14.75H0V13.25ZM1.5 1.24998H0V2.74998H1.5V1.24998ZM3 9.24998H4.5V10.75H3V9.24998Z"
+                  fill="var(--docum-theme)" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="sidebarContent">
+        <div id="thumbnailView">
+        </div>
+        <div id="outlineView" class="hidden">
+        </div>
+        <div id="attachmentsView" class="hidden">
+        </div>
+        <div id="layersView" class="hidden">
+        </div>
+      </div>
+      <div id="sidebarResizer"></div>
+    </div> <!-- sidebarContainer -->
+
+    <div id="mainContainer">
+      <div class="findbar hidden doorHanger dIfaC" id="findbar">
+        <div id="findbarInputContainer" class="dIfaC">
+          <input id="findInput" class="toolbarField" title="Find" placeholder="Find in document…" tabindex="91"
+            data-l10n-id="find_input" aria-invalid="false">
+          <div class="splitToolbarButton">
+            <button id="findPrevious" class="toolbarButton" title="Find the previous occurrence of the phrase"
+              tabindex="92" data-l10n-id="find_previous">
+              <svg class="mainToolbarImage" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" style="transform:rotate(90deg);">
+              <path d="M8.35176 10.9989L13.8178 5.53391C13.876 5.47594 13.9222 5.40702 13.9537 5.33113C13.9851 5.25524 14.0013 5.17387 14.0012 5.0917C14.0011 5.00954 13.9848 4.9282 13.9531 4.85238C13.9215 4.77656 13.8751 4.70775 13.8168 4.64991C13.6991 4.53309 13.5401 4.46753 13.3743 4.46753C13.2085 4.46753 13.0494 4.53309 12.9318 4.64991L7.99776 9.58491L3.06776 4.65091C2.9494 4.53853 2.79183 4.47682 2.62863 4.47894C2.46542 4.48106 2.3095 4.54683 2.19409 4.66224C2.07868 4.77765 2.01291 4.93357 2.01079 5.09677C2.00868 5.25997 2.07039 5.41754 2.18276 5.53591L7.64776 10.9999L8.35176 10.9989Z" fill="var(--docum-theme)"></path>
+            </svg>
+            </button>
+            <button id="findNext" class="toolbarButton" title="Find the next occurrence of the phrase" tabindex="93"
+              data-l10n-id="find_next">
+              <svg class="mainToolbarImage" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" style="transform:rotate(270deg)">
+              <path d="M8.35176 10.9989L13.8178 5.53391C13.876 5.47594 13.9222 5.40702 13.9537 5.33113C13.9851 5.25524 14.0013 5.17387 14.0012 5.0917C14.0011 5.00954 13.9848 4.9282 13.9531 4.85238C13.9215 4.77656 13.8751 4.70775 13.8168 4.64991C13.6991 4.53309 13.5401 4.46753 13.3743 4.46753C13.2085 4.46753 13.0494 4.53309 12.9318 4.64991L7.99776 9.58491L3.06776 4.65091C2.9494 4.53853 2.79183 4.47682 2.62863 4.47894C2.46542 4.48106 2.3095 4.54683 2.19409 4.66224C2.07868 4.77765 2.01291 4.93357 2.01079 5.09677C2.00868 5.25997 2.07039 5.41754 2.18276 5.53591L7.64776 10.9999L8.35176 10.9989Z" fill="var(--docum-theme)"></path>
+            </svg>
+            </button>
+          </div>
+        </div>
+        <div id="findbarOptionsOneContainer" class="dIfaC">
+          <input type="checkbox" id="findHighlightAll" class="toolbarField" tabindex="94">
+          <label for="findHighlightAll" class="toolbarLabel" data-l10n-id="find_highlight">Highlight All</label>
+          <input type="checkbox" id="findMatchCase" class="toolbarField" tabindex="95">
+          <label for="findMatchCase" class="toolbarLabel" data-l10n-id="find_match_case_label">Match Case</label>
+        </div>
+        <div id="findbarOptionsTwoContainer" class="dIfaC">
+          <input type="checkbox" id="findMatchDiacritics" class="toolbarField" tabindex="96">
+          <label for="findMatchDiacritics" class="toolbarLabel" data-l10n-id="find_match_diacritics_label">Match
+            Diacritics</label>
+          <input type="checkbox" id="findEntireWord" class="toolbarField" tabindex="97">
+          <label for="findEntireWord" class="toolbarLabel" data-l10n-id="find_entire_word_label">Whole Words</label>
+        </div>
+
+        <div id="findbarMessageContainer" aria-live="polite" class="dIfaC">
+          <span id="findResultsCount" class="toolbarLabel"></span>
+          <span id="findMsg" class="toolbarLabel"></span>
+        </div>
+      </div> <!-- findbar -->
+      <div class="editorToolBar" id="editorToolContainer" style="display:none;">
+        <div class="clrOpa" id="editorInkParamsToolbar">
+          <button class="toolbarButton" style="background-color: var(--ink-color);width: 26px;height: 26px;"
+            id="clrTogBut"></button>
+          <button type="button" class="toolbarButton" id="opaThkTogDiv">
+            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="toolbarButtonImage mainToolbarImage"
+              style="fill: var(--docum-theme);width:23px;">
+              <path class="tool-option-button-light-body"
+                d="M12.78,7.66,10.35,5.22,4,11.56V14H6.44Zm2.09-2.1a.42.42,0,0,0,0-.6L13,3.13a.42.42,0,0,0-.6,0L11.29,4.28l2.44,2.44Z">
+              </path>
+              <polygon class="tool-option-button-stroke-color" points="17 13 17 17 3 17 17 13"></polygon>
+              <path class="tool-option-button-stroke-outline"
+                d="M3,17L17,13L17,16L16,16L16,14.34L10.18,16L17,16L17,17z">
+              </path>
+              <path class="tool-option-button-dark-body"
+                d="M12.78,7.66,11.56,6.44,4,14H6.44Zm2.09-2.1a.42.42,0,0,0,0-.6L14,4,12.51,5.49l1.22,1.22Z">
+              </path>
+            </svg>
+          </button>
+        </div>
+        <button id="editorInk" class="toolbarButton" disabled="disabled" title="Draw" role="radio" aria-checked="false"
+          aria-controls="editorInkParamsToolbar" tabindex="36" data-l10n-id="editor_ink2">
+          <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+            class="toolbarButtonImage mainToolbarImage" style="fill:var(--docum-theme);">
+            <g>
+              <polygon points="3 17.25 3 21 6.74 21 14.28 13.47 10.53 9.72"></polygon>
+              <path
+                d="M18.37,3.3 L20.71,5.63 C21.1,6.02 21.11,6.66 20.72,7.05 L15.35,12.41 L11.59,8.65 L14.12,6.12 L13.39,5.39 L7.73,11.05 L6.33,9.65 L12.7,3.29 C13.09,2.9 13.74,2.91 14.12,3.3 L15.54,4.71 L16.96,3.3 C17.34,2.91 17.98,2.91 18.37,3.3 L18.37,3.3 Z">
+              </path>
+              <path
+                d="M17.7,4L20,6.3L15.4,11L13,8.6l1.8-1.8l0.7-0.7l-0.7-0.7l-0.2-0.2l0.2,0.2l0.7,0.7l0.7-0.7L17.7,4 M13.4,3 c-0.3,0-0.5,0.1-0.7,0.3L6.3,9.6l1.4,1.4l5.7-5.7l0.7,0.7l-2.5,2.5l3.8,3.8L20.7,7c0.4-0.4,0.4-1,0-1.4l-2.3-2.3 C18.2,3.1,17.9,3,17.7,3S17.2,3.1,17,3.3l-1.4,1.4l-1.4-1.4C13.9,3.1,13.7,3,13.4,3L13.4,3z">
+              </path>
+            </g>
+          </svg>
+        </button>
+        <button id="editorFreeText" class="toolbarButton" disabled="disabled" title="Text" role="radio"
+          aria-checked="false" aria-controls="editorFreeTextParamsToolbar" tabindex="35"
+          data-l10n-id="editor_free_text2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.15 0.1 20 20"
+            style="stroke-linecap:round;stroke-linejoin:round;" class="toolbarButtonImage mainToolbarImage">
+            <path
+              d="M.7682 2.005V19.45H19.5511V.7835H.7622V2.0022M3.2916 2.9351V6.232M3.3105 4.5267H17.1046M17.1236 2.9351V6.3268M10.223 4.5553V17.0467M8.6468 17.0467H11.8881"
+              stroke="var(--docum-theme)" stroke-width="1" fill="none" />
+          </svg>
+        </button>
+        <button id="editorStamp" class="toolbarButton hidden" disabled="disabled" title="Image" role="radio"
+          aria-checked="false" tabindex="34" data-l10n-id="editor_stamp">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.2 0 19.7 20" class="toolbarButtonImage mainToolbarImage">
+            <path
+              d="M.3558 8.5802V15.2547C.3782 15.9759 1.0164 16.5724 1.719 16.6132H11.3973Q11.1639 14.7909 12.3625 13.0613H1.9385C1.8142 13.0618 1.6636 12.9111 1.6643 12.8124V1.9901C1.6608 1.815 1.7798 1.6511 1.9716 1.6536H15.443C15.6528 1.6616 15.735 1.7891 15.7435 1.9167V11.1912Q16.4948 11.1319 17.0585 11.2571V1.6062C17.0451.7982 16.3729.1684 15.6704.1623H1.7321C1.0215.1553.3612.8676.3586 1.6034V8.5795M2.3943 7.4091V10.4351Q2.3975 10.5416 2.4785 10.5205 4.6198 9.917 6.5184 8.8676 6.6128 8.8051 6.4985 8.7545 4.4208 8.2651 2.5271 7.3404 2.3922 7.2842 2.3942 7.4092M2.6448 12.1896H13.2492Q14.0841 11.5374 15.0065 11.33V9.6916Q15.007 9.4503 14.7397 9.2498 13.7507 8.521 12.9361 7.6895 12.1981 6.9683 11.6593 6.6841C11.2224 6.472 10.9381 6.5399 10.4927 6.7689Q9.7079 7.1846 9.0418 7.7446 6.2729 9.9712 2.7463 11.1612 2.411 11.2988 2.4032 11.5171V11.9743Q2.4066 12.1651 2.6445 12.1899M7.0238 3.3538A1 1 0 007.0578 6.6257 1 1 0 007.0246 3.3543M15.9131 12.1523A1 1 0 0015.8799 19.9162 1 1 0 0015.9127 12.1522M16.4304 13.9569V15.4681H18.1348Q18.3394 15.4817 18.3475 15.6995V16.3644Q18.3443 16.5566 18.0967 16.5786H16.4373V18.3031Q16.4221 18.5062 16.2228 18.5078H15.5167Q15.324 18.4946 15.3173 18.2852V16.5874H13.6168Q13.4284 16.5716 13.4102 16.3946V15.6951Q13.4339 15.4981 13.617 15.4841H15.3108V13.7839Q15.3251 13.5729 15.5321 13.547H16.217Q16.416 13.5566 16.4305 13.7693V13.9575"
+              fill="var(--docum-theme)" />
+          </svg>
+        </button>
+      </div>
+      <div id="editorFreeTextParamsToolbar" class="editorParamsToolbar hidden doorHangerRight">
+        <div class="editorParamsToolbarContainer">
+          <div class="editorParamsSetter">
+            <label for="editorFreeTextColor" class="editorParamsLabel"
+              data-l10n-id="editor_free_text_color">Color</label>
+            <input type="color" id="editorFreeTextColor" class="editorParamsColor" tabindex="100">
+          </div>
+          <div class="editorParamsSetter">
+            <label for="editorFreeTextFontSize" class="editorParamsLabel"
+              data-l10n-id="editor_free_text_size">Size</label>
+            <input type="range" id="editorFreeTextFontSize" class="editorParamsSlider" value="10" min="5" max="100"
+              step="1" tabindex="101">
+          </div>
+        </div>
+      </div>
+      <div class="opaThk editorParamsToolbar hidden doorHangerRight" id="opaThkDiv">
+        <div class="editorParamsSet" id="inkThickDiv">
+          <label for="editorInkThickness" class="editorParamsLabel"
+            data-l10n-id="editor_ink_thickness">Thickness</label>
+          <input type="range" id="editorInkThickness" class="editorParamsSlider" value="1" min="1" max="20" step="1"
+            tabindex="103">
+        </div>
+        <div class="editorParamsSet" id="textOpaDiv" style="margin-top: 10px;">
+          <label for="editorInkOpacity" class="editorParamsLabel" data-l10n-id="editor_ink_opacity">Opacity</label>
+          <input type="range" id="editorInkOpacity" class="editorParamsSlider" value="100" min="1" max="100" step="1"
+            tabindex="104">
+        </div>
+      </div>
+      <div class="opaClr editorParamsToolbar hidden doorHangerRight" id="clrTogDiv">
+        <div class="opaClrDv2">
+          <button class="choosePlt btnSlcTd">Pallete</button>
+          <button class="choosePlt" id="clrChooseBtn">Custom</button>
+        </div>
+        <div class="clrPallate">
+          <div class="clrPallate2" id="clrPallate"></div>
+        </div>
+        <div class="target-wrapper clrPicker hidden" id="clrChooseDv"></div>
+      </div>
+      <div id="" class="editorParamsToolbar hidden doorHangerRight">
+        <div class="editorParamsToolbarContainer">
+          <div class="editorParamsSetter">
+            <label for="editorInkColor" class="editorParamsLabel" data-l10n-id="editor_ink_color">Color</label>
+            <input type="color" id="editorInkColor" class="editorParamsColor" tabindex="102">
+          </div>
+          <div class="editorParamsSetter">
+
+
+          </div>
+          <div class="editorParamsSetter">
+
+          </div>
+        </div>
+      </div>
+      <div id="secondaryToolbar" class="secondaryToolbar hidden doorHangerRight">
+        <div id="secondaryToolbarButtonContainer">
+          <button id="secondaryOpenFile" class="secondaryToolbarButton visibleLargeView" title="Open File" tabindex="51"
+            data-l10n-id="open_file">
+            <span data-l10n-id="open_file_label">Open</span>
+          </button>
+
+          <button id="secondaryPrint" class="secondaryToolbarButton visibleMediumView" title="Print" tabindex="52"
+            data-l10n-id="print">
+            <span data-l10n-id="print_label">Print</span>
+          </button>
+
+          <button id="secondaryDownload" class="secondaryToolbarButton visibleMediumView" title="Save" tabindex="53"
+            data-l10n-id="save">
+            <span data-l10n-id="save_label">Save</span>
+          </button>
+
+          <div class="horizontalToolbarSeparator visibleLargeView"></div>
+
+
+
+          <a href="#" id="viewBookmark" class="secondaryToolbarButton" title="Current Page (View URL from Current Page)"
+            tabindex="55" data-l10n-id="bookmark1">
+            <span data-l10n-id="bookmark1_label">Current Page</span>
+          </a>
+
+          <div id="viewBookmarkSeparator" class="horizontalToolbarSeparator"></div>
+
+          <button id="firstPage" class="secondaryToolbarButton" title="Go to First Page" tabindex="56"
+            data-l10n-id="first_page">
+            <span data-l10n-id="first_page_label">Go to First Page</span>
+          </button>
+          <button id="lastPage" class="secondaryToolbarButton" title="Go to Last Page" tabindex="57"
+            data-l10n-id="last_page">
+            <span data-l10n-id="last_page_label">Go to Last Page</span>
+          </button>
+
+          <div class="horizontalToolbarSeparator"></div>
+
+
+
+          <div class="horizontalToolbarSeparator"></div>
+
+          <div id="cursorToolButtons" role="radiogroup">
+            <button id="cursorSelectTool" class="secondaryToolbarButton toggled" title="Enable Text Selection Tool"
+              tabindex="60" data-l10n-id="cursor_text_select_tool" role="radio" aria-checked="true">
+              <span data-l10n-id="cursor_text_select_tool_label">Text Selection Tool</span>
+            </button>
+            <button id="cursorHandTool" class="secondaryToolbarButton" title="Enable Hand Tool" tabindex="61"
+              data-l10n-id="cursor_hand_tool" role="radio" aria-checked="false">
+              <span data-l10n-id="cursor_hand_tool_label">Hand Tool</span>
+            </button>
+          </div>
+
+          <div class="horizontalToolbarSeparator"></div>
+
+          <div id="scrollModeButtons" role="radiogroup">
+            <button id="scrollPage" class="secondaryToolbarButton" title="Use Page Scrolling" tabindex="62"
+              data-l10n-id="scroll_page" role="radio" aria-checked="false">
+              <span data-l10n-id="scroll_page_label">Page Scrolling</span>
+            </button>
+            <button id="scrollVertical" class="secondaryToolbarButton toggled" title="Use Vertical Scrolling"
+              tabindex="63" data-l10n-id="scroll_vertical" role="radio" aria-checked="true">
+              <span data-l10n-id="scroll_vertical_label">Vertical Scrolling</span>
+            </button>
+            <button id="scrollHorizontal" class="secondaryToolbarButton" title="Use Horizontal Scrolling" tabindex="64"
+              data-l10n-id="scroll_horizontal" role="radio" aria-checked="false">
+              <span data-l10n-id="scroll_horizontal_label">Horizontal Scrolling</span>
+            </button>
+            <button id="scrollWrapped" class="secondaryToolbarButton" title="Use Wrapped Scrolling" tabindex="65"
+              data-l10n-id="scroll_wrapped" role="radio" aria-checked="false">
+              <span data-l10n-id="scroll_wrapped_label">Wrapped Scrolling</span>
+            </button>
+          </div>
+
+          <div class="horizontalToolbarSeparator"></div>
+
+          <div id="spreadModeButtons" role="radiogroup">
+            <button id="spreadNone" class="secondaryToolbarButton toggled" title="Do not join page spreads"
+              tabindex="66" data-l10n-id="spread_none" role="radio" aria-checked="true">
+              <span data-l10n-id="spread_none_label">No Spreads</span>
+            </button>
+            <button id="spreadOdd" class="secondaryToolbarButton"
+              title="Join page spreads starting with odd-numbered pages" tabindex="67" data-l10n-id="spread_odd"
+              role="radio" aria-checked="false">
+              <span data-l10n-id="spread_odd_label">Odd Spreads</span>
+            </button>
+            <button id="spreadEven" class="secondaryToolbarButton"
+              title="Join page spreads starting with even-numbered pages" tabindex="68" data-l10n-id="spread_even"
+              role="radio" aria-checked="false">
+              <span data-l10n-id="spread_even_label">Even Spreads</span>
+            </button>
+          </div>
+
+          <div class="horizontalToolbarSeparator"></div>
+
+          <button id="documentProperties" class="secondaryToolbarButton" title="Document Properties…" tabindex="69"
+            data-l10n-id="document_properties" aria-controls="documentPropertiesDialog">
+            <span data-l10n-id="document_properties_label">Document Properties…</span>
+          </button>
+        </div>
+      </div> <!-- secondaryToolbar -->
+
+      <div class="toolbar">
+        <div id="toolbarContainer">
+          <div id="toolbarViewer">
+            <div class="cName" id="AppName">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0.1 20 20" style="width:30px;height:30px;">
+                <g>
+                  <path
+                    d="m2.7705 11.7165q-1.7365-.063-2.2043-1.7005-.324-1.2147.5938-1.9615c.4588-.3329 1.0257-.2609 1.3046-.036q.6208.5309.09 1.1697c-.4679.4499-1.2416-.054-1.4666-.5848q-.7467-1.7096.5489-3.473 1.1787-1.4306 2.5193-.9987.5938.2159.5668.7827-.1349.5399-.8187.3329c-.4223-.1505-.8178-.7437-.279-1.3946q1.6365-1.9418 3.9655-1.7001 1.2963.1428 1.9115.9118c.3186.4395-.0769.9888-.4065 1.1206q-.8019.1868-1.0986-.5493-.1648-.5273.6043-.9887 2.5268-1.3403 4.5152.1208 1.4062 1.1535.8899 1.9885-.4944.725-1.1975.4174-.5822-.3625-.1868-1.0546.3296-.5713 1.5271-.6372 2.5927.0329 3.5595 2.2301.5822 1.6479-.066 2.4718-.6701.758-1.4281.1538-.5164-.6592 0-1.2414.5822-.6152 1.6149-.0659 1.8128 1.1865 1.6041 3.933c-.0989.6591-.4834 1.1095-.9338 1.2084q-.813.1977-1.8566-.4834-2.0434-1.538-3.0871-2.1312-1.6698-1.1206-3.5045-1.1206-2.1312-.011-3.5045 1.2963c-.4724.5713-.3515 1.0766-.0549 1.4502q.6701.791 1.8236.5273 1.7907-.5383 1.9775-2.2741.2417-1.9225 1.571-2.9222 1.6808-1.0217 2.6696-.2747c.4065.2856.4614.8239.1538 1.1755q-1.0986 1.1096-3.933-.2747-.9228-.5493-1.7467-1.2304-1.4172-1.1535-3.0761-.2197-1.7907 1.2744-1.5819 2.7025.2197.791 1.7357.3955c1.0657-.4174.8679-1.1205.5823-1.3183-.4724-.2746-1.0657.022-1.4502.3845q-1.6259 1.6809-1.5929 3.109.0879 1.7688 2.2081 2.0983 1.2195.0989 2.351-.2636.6702-.2197 1.3843-.1209 1.1645.033 2.0543.3845.8789.4505 1.4831.846 1.2854.6372 2.1753.1867 1.1864-.758.4064-2.0654-.5163-.7031-1.3952-.9118-.5163-.0659-.9557.0989-.6153.1428-1.1206.0879-.9228-.1319-1.4392.1428-.725.4284-.6372 1.4281.0879 1.0766 1.9335 2.4388 1.9555 1.3403 1.1536 3.3398"
+                    stroke="var(--docum-theme" stroke-width="0.5" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </g>
+              </svg>
+              <p style="color: var(--docum-theme);font-size:18px;">Ample</p>
+            </div>
+            <div class="toolbarButtonSpacer"></div>
+            <div id="toolbarViewerLeft" class="myToolBar">
+              <button id="sidebarToggle" class="toolbarButton" title="Toggle Sidebar" tabindex="11"
+                data-l10n-id="toggle_sidebar" aria-expanded="false" aria-controls="sidebarContainer">
+                <svg class="toolbarButtonImage mainToolbarImage" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                  fill="none">
+                  <path fill-rule="evenodd"
+                    d="M16 4V12.25C16 12.7804 15.7893 13.2891 15.4142 13.6642C15.0391 14.0393 14.5304 14.25 14 14.25H2C1.46957 14.25 0.960859 14.0393 0.585786 13.6642C0.210714 13.2891 0 12.7804 0 12.25V4C0 3.46957 0.210714 2.96086 0.585786 2.58579C0.960859 2.21071 1.46957 2 2 2H14C14.5304 2 15.0391 2.21071 15.4142 2.58579C15.7893 2.96086 16 3.46957 16 4ZM1.25 3.85V12.4L1.85 13H6.75V3.25H1.85L1.25 3.85ZM14.15 13H8V3.25H14.15L14.75 3.85V12.4L14.15 13ZM5.35355 10.1464C5.44732 10.2402 5.5 10.3674 5.5 10.5C5.5 10.6326 5.44732 10.7598 5.35355 10.8536C5.25979 10.9473 5.13261 11 5 11H3C2.86739 11 2.74021 10.9473 2.64645 10.8536C2.55268 10.7598 2.5 10.6326 2.5 10.5C2.5 10.3674 2.55268 10.2402 2.64645 10.1464C2.74021 10.0527 2.86739 10 3 10H5C5.13261 10 5.25979 10.0527 5.35355 10.1464ZM5.5 8C5.5 7.86739 5.44732 7.74021 5.35355 7.64645C5.25979 7.55268 5.13261 7.5 5 7.5H3C2.86739 7.5 2.74021 7.55268 2.64645 7.64645C2.55268 7.74021 2.5 7.86739 2.5 8C2.5 8.13261 2.55268 8.25979 2.64645 8.35355C2.74021 8.44732 2.86739 8.5 3 8.5H5C5.13261 8.5 5.25979 8.44732 5.35355 8.35355C5.44732 8.25979 5.5 8.13261 5.5 8ZM5.35355 5.14645C5.44732 5.24021 5.5 5.36739 5.5 5.5C5.5 5.63261 5.44732 5.75979 5.35355 5.85355C5.25979 5.94732 5.13261 6 5 6H3C2.86739 6 2.74021 5.94732 2.64645 5.85355C2.55268 5.75979 2.5 5.63261 2.5 5.5C2.5 5.36739 2.55268 5.24021 2.64645 5.14645C2.74021 5.05268 2.86739 5 3 5H5C5.13261 5 5.25979 5.05268 5.35355 5.14645Z"
+                    style="fill: var(--docum-theme);" />
+                </svg>
+              </button>
+              <button id="viewFind" class="toolbarButton" title="Find in Document" tabindex="12" data-l10n-id="findbar"
+                aria-expanded="false" aria-controls="findbar">
+                <svg width="18" height="18" viewBox="0 0 18 18" focusable="false" aria-hidden="true" role="img"
+                  style="fill: var(--docum-theme);" class="mainToolbarImage">
+                  <g>
+                    <path
+                      d="M17.247,16.18649l-4.33492-4.33493a6.26629,6.26629,0,1,0-1.06055,1.06055l4.335,4.33489a.5.5,0,0,0,.7071,0l.35344-.35344A.5.5,0,0,0,17.247,16.18649ZM8,12.75A4.75,4.75,0,1,1,12.75,8,4.75,4.75,0,0,1,8,12.75Z">
+                    </path>
+
+                  </g>
+                </svg>
+              </button>
+              <div class="splitToolbarButton hiddenSmallView">
+
+              </div>
+
+            </div>
+            <div class="fileNameV" id="fileNameViewer"></div>
+            <div id="toolbarViewerMiddle">
+              <div class="splitToolbarButton">
+
+              </div>
+              <span id="scaleSelectContainer" class="dropdownToolbarButton">
+                <select id="scaleSelect" title="Zoom" tabindex="23" data-l10n-id="zoom">
+                  <option id="pageAutoOption" title="" value="auto" selected="selected" data-l10n-id="page_scale_auto">
+                    Automatic Zoom</option>
+                  <option id="pageActualOption" title="" value="page-actual" data-l10n-id="page_scale_actual">Actual
+                    Size</option>
+                  <option id="pageFitOption" title="" value="page-fit" data-l10n-id="page_scale_fit">Page Fit</option>
+                  <option id="pageWidthOption" title="" value="page-width" data-l10n-id="page_scale_width">Page Width
+                  </option>
+                  <option id="customScaleOption" title="" value="custom" disabled="disabled" hidden="true"></option>
+                  <option title="" value="0.5" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 50 }'>50%
+                  </option>
+                  <option title="" value="0.75" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 75 }'>75%
+                  </option>
+                  <option title="" value="1" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 100 }'>100%
+                  </option>
+                  <option title="" value="1.25" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 125 }'>125%
+                  </option>
+                  <option title="" value="1.5" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 150 }'>150%
+                  </option>
+                  <option title="" value="2" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 200 }'>200%
+                  </option>
+                  <option title="" value="3" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 300 }'>300%
+                  </option>
+                  <option title="" value="4" data-l10n-id="page_scale_percent" data-l10n-args='{ "scale": 400 }'>400%
+                  </option>
+                </select>
+              </span>
+            </div>
+            <div id="toolbarViewerRight">
+              <div class="myDiv1 myToolBar">
+                <button id="openFile" class="toolbarButton hiddenLargeView" title="Open File" tabindex="31"
+                  data-l10n-id="open_file">
+                  <svg class="toolbarButtonImage mainToolbarImage" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="-0.0133 -0.1182 19.96 13.15">
+                    <path
+                      d="M14.722 2.6618H8.097Q7.7591 1.0769 6.0108 1.0475H2.235Q.7071 1.1062.4867 2.737V10.9791Q.6336 12.5364 1.9853 12.5364H15.1343Q15.8689 12.5071 16.1628 11.5962L18.3371 6.1309C18.5428 5.5579 18.1608 5.0437 17.0149 5.0143H4.806C3.998 4.9996 3.807 5.4551 3.4985 6.1015L.9232 12.1391M15.0398 9.054C13.1331 4.7591 16.8726 2.482 19.4458 1.3527M18.7829 3.747 19.446 1.3529 16.9258.3818"
+                      stroke="var(--docum-theme)" stroke-width="1" fill="none" />
+                  </svg>
+                </button>
+
+                <button id="print" class="toolbarButton hiddenMediumView" title="Print" tabindex="32"
+                  data-l10n-id="print">
+                  <svg class="toolbarButtonImage mainToolbarImage" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="-0.2203 0.1942 19.44 18.63">
+                    <path d="M14.6644 5.5434V.6942H4.2474V5.5235" fill="none" stroke-width="1"
+                      stroke="var(--docum-theme)" stroke-linejoin="round" />
+                    <path
+                      d="M1.5244 5.5162Q.3686 5.5192.2797 6.487V14.1332Q.3483 15.0897 1.3935 15.1507H4.2285V11.5224H14.687V15.1507H17.5403Q18.6494 15.0284 18.716 13.9987V6.6928Q18.6412 5.548 17.6338 5.5162H1.5344M15.8986 7.5559A.5.5 0 0115.8986 9.1607.5.5 0 0115.8986 7.5559"
+                      fill="var(--docum-theme)" />
+                    <path
+                      d="M4.2281 11.5225V18.3284H14.687V11.5212M6.1496 13.1098H12.8059M6.0902 14.7472H11.2516M6.1021 16.3608H12.9008"
+                      fill="none" stroke-width="1" stroke="var(--docum-theme)" stroke-linecap="round" />
+                  </svg>
+                </button>
+
+                <button id="download" class="toolbarButton hiddenMediumView" title="Save" tabindex="33"
+                  data-l10n-id="save">
+                  <svg class="toolbarButtonImage mainToolbarImage" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0.5 0.5 18.281 16.7">
+                    <path
+                      d="M1.7386.8415Q.8343.83.8458 1.6084V15.9484Q.8707 16.8474 1.6734 16.8477H17.7178Q18.4603 16.839 18.4603 16.0325V3.0058Q18.4459 2.4719 17.7969 2.4719H6.9519Q6.5783 2.4441 6.4035 2.1368L5.7588 1.1788Q5.5238.8353 4.9996.8415H1.7398M.8457 5.1357Q1.0009 4.4797 1.6974 4.4717H17.7173Q18.248 4.5385 18.4595 5.2098M9.6512 6.6827V12.754M7.5459 10.7574 9.6512 12.8219 11.7293 10.7438M5.5085 14.4382H13.821"
+                      stroke="var(--docum-theme)" stroke-width="1" fill="none" stroke-linecap="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div id="loadingBar">
+            <div class="progress">
+              <div class="glimmer">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mainToolbar">
+          <div class="toolbarButton writtenTool" title="Edit PDF" id="editPDFCon" style="position:absolute;top:10px;">
+            Edit</div>
+          <button id="zoomIn" class="toolbarButton" title="Zoom In" tabindex="22" data-l10n-id="zoom_in">
+            <svg width="18" height="18" viewBox="0 0 18 18" focusable="false" aria-hidden="true" role="img"
+              style="fill: var(--docum-theme);" class="mainToolbarImage">
+              <g>
+                <path
+                  d="M17.247,16.18649l-4.33492-4.33493a6.26629,6.26629,0,1,0-1.06055,1.06055l4.335,4.33489a.5.5,0,0,0,.7071,0l.35344-.35344A.5.5,0,0,0,17.247,16.18649ZM8,12.75A4.75,4.75,0,1,1,12.75,8,4.75,4.75,0,0,1,8,12.75Z">
+                </path>
+                <path
+                  d="M10.5,7.25H8.75V5.5a.5.5,0,0,0-.5-.5h-.5a.5.5,0,0,0-.5.5V7.25H5.5a.5.5,0,0,0-.5.5v.5a.5.5,0,0,0,.5.5H7.25V10.5a.5.5,0,0,0,.5.5h.5a.5.5,0,0,0,.5-.5V8.75H10.5a.5.5,0,0,0,.5-.5v-.5A.5.5,0,0,0,10.5,7.25Z">
+                </path>
+              </g>
+            </svg>
+          </button>
+          <button id="zoomOut" class="toolbarButton" title="Zoom Out" tabindex="21" data-l10n-id="zoom_out">
+            <svg class="mainToolbarImage" width="18" height="18" viewBox="0 0 18 18" focusable="false"
+              aria-hidden="true" role="img" style="fill:var(--docum-theme);">
+              <g>
+                <path
+                  d="M17.247,16.18649l-4.33492-4.33493a6.26629,6.26629,0,1,0-1.06055,1.06055l4.335,4.33489a.5.5,0,0,0,.7071,0l.35344-.35344A.5.5,0,0,0,17.247,16.18649ZM8,12.75A4.75,4.75,0,1,1,12.75,8,4.75,4.75,0,0,1,8,12.75Z">
+                </path>
+                <rect x="5" y="7.25" width="6" height="1.5" rx="0.5"></rect>
+              </g>
+            </svg>
+          </button>
+          <div class="splitToolbarButtonSeparator"></div>
+          <button class="toolbarButton" title="Previous Page" id="previous" tabindex="13" data-l10n-id="previous">
+            <svg class="mainToolbarImage" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+              fill="none">
+              <path
+                d="M8.35179 5.001L13.8178 10.466C13.876 10.524 13.9222 10.5929 13.9537 10.6688C13.9852 10.7447 14.0013 10.826 14.0012 10.9082C14.0011 10.9904 13.9848 11.0717 13.9531 11.1475C13.9215 11.2234 13.8751 11.2922 13.8168 11.35C13.6991 11.4668 13.5401 11.5324 13.3743 11.5324C13.2085 11.5324 13.0494 11.4668 12.9318 11.35L7.99879 6.416L3.06679 11.349C2.94842 11.4614 2.79085 11.5231 2.62765 11.521C2.46445 11.5189 2.30853 11.4531 2.19312 11.3377C2.07771 11.2223 2.01193 11.0663 2.00982 10.9031C2.0077 10.7399 2.06941 10.5824 2.18179 10.464L7.64779 5L8.35179 5.001Z"
+                fill="var(--docum-theme)" />
+            </svg>
+          </button>
+          <input type="number" id="pageNumber" class="toolbarField toolbarButton" title="Page" value="1" min="1"
+            tabindex="15" data-l10n-id="page" autocomplete="off">
+          <span id="numPages" class="toolbarLabel"></span>
+          <button class="toolbarButton" title="Next Page" id="next" tabindex="14" data-l10n-id="next">
+            <svg class="mainToolbarImage" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+              fill="none">
+              <path
+                d="M8.35176 10.9989L13.8178 5.53391C13.876 5.47594 13.9222 5.40702 13.9537 5.33113C13.9851 5.25524 14.0013 5.17387 14.0012 5.0917C14.0011 5.00954 13.9848 4.9282 13.9531 4.85238C13.9215 4.77656 13.8751 4.70775 13.8168 4.64991C13.6991 4.53309 13.5401 4.46753 13.3743 4.46753C13.2085 4.46753 13.0494 4.53309 12.9318 4.64991L7.99776 9.58491L3.06776 4.65091C2.9494 4.53853 2.79183 4.47682 2.62863 4.47894C2.46542 4.48106 2.3095 4.54683 2.19409 4.66224C2.07868 4.77765 2.01291 4.93357 2.01079 5.09677C2.00868 5.25997 2.07039 5.41754 2.18276 5.53591L7.64776 10.9999L8.35176 10.9989Z"
+                fill="var(--docum-theme)" />
+            </svg>
+          </button>
+          <div class="splitToolbarButtonSeparator"></div>
+          <button id="pageRotateCw" class="toolbarButton" title="Rotate Clockwise" tabindex="58"
+            data-l10n-id="page_rotate_cw">
+            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" role="none"
+              style="pointer-events: none; display: block; width: 18px;; height: 18px;fill:var(--docum-theme);transform:scaleX(-1);">
+              <g>
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M7.34 6.41L.86 12.9l6.49 6.48 6.49-6.48-6.5-6.49zM3.69 12.9l3.66-3.66L11 12.9l-3.66 3.66-3.65-3.66zm15.67-6.26C17.61 4.88 15.3 4 13 4V.76L8.76 5 13 9.24V6c1.79 0 3.58.68 4.95 2.05 2.73 2.73 2.73 7.17 0 9.9C16.58 19.32 14.79 20 13 20c-.97 0-1.94-.21-2.84-.61l-1.49 1.49C10.02 21.62 11.51 22 13 22c2.3 0 4.61-.88 6.36-2.64 3.52-3.51 3.52-9.21 0-12.72z">
+                </path>
+              </g>
+            </svg>
+          </button>
+          <button id="pageRotateCcw" class="toolbarButton" title="Rotate Counterclockwise" tabindex="59"
+            data-l10n-id="page_rotate_ccw">
+            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" role="none"
+              style="pointer-events: none; display: block; width: 18px; height: 18px;fill:var(--docum-theme);">
+              <g>
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M7.34 6.41L.86 12.9l6.49 6.48 6.49-6.48-6.5-6.49zM3.69 12.9l3.66-3.66L11 12.9l-3.66 3.66-3.65-3.66zm15.67-6.26C17.61 4.88 15.3 4 13 4V.76L8.76 5 13 9.24V6c1.79 0 3.58.68 4.95 2.05 2.73 2.73 2.73 7.17 0 9.9C16.58 19.32 14.79 20 13 20c-.97 0-1.94-.21-2.84-.61l-1.49 1.49C10.02 21.62 11.51 22 13 22c2.3 0 4.61-.88 6.36-2.64 3.52-3.51 3.52-9.21 0-12.72z">
+                </path>
+              </g>
+            </svg>
+          </button>
+          <button id="presentationMode" class="toolbarButton" title="Switch to Presentation Mode" tabindex="54"
+            data-l10n-id="presentation_mode">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.4 0.4 19.3 19.3"
+              style="stroke-linecap: round;stroke-linejoin:round;width:16px;stroke-width:2;">
+              <path
+                d="M6.9698 1.0091H.9865V6.9924M1.003 13.0578V19.1394H6.9207M12.9859 19.1394H19.084V13.1233M19.084 7.0417V1.042H13.0515"
+                stroke="var(--docum-theme)" fill="none" />
+            </svg>
+          </button>
+          <button id="secondaryToolbarToggle" class="toolbarButton" title="Tools" tabindex="48" data-l10n-id="tools"
+            aria-expanded="false" aria-controls="secondaryToolbar" style="flex-direction: column;">
+            <svg class="mainToolbarImage" width="18" height="18" viewBox="0 0 18 18" focusable="false"
+              aria-hidden="true" role="img">
+              <g>
+                <path
+                  d="M15.42216,3.13907,12.90208.583A1.98767,1.98767,0,0,0,11.50248,0H4.20876A2.248,2.248,0,0,0,2,2.24994v12.4967A2.2508,2.2508,0,0,0,4.21946,17h9.5708A2.24881,2.24881,0,0,0,16,14.75007V4.55211A1.9827,1.9827,0,0,0,15.42216,3.13907ZM11.49567,1.5a.52515.52515,0,0,1,.34063.13866L14.35636,4.1947a.492.492,0,0,1,.13738.31786H11.49567ZM13.77954,15.5H4.2302a.74555.74555,0,0,1-.731-.75V2.24652A.74286.74286,0,0,1,4.21946,1.5H9.99651V5.26254a.75.75,0,0,0,.74958.75h3.75472v8.74093a.743.743,0,0,1-.72129.74659Z"
+                  fill="var(--iconFill, #464646)" style="fill: var(--docum-theme);"></path>
+                <path
+                  d="M11.60882,10.97362l-.49877-.01853a.5.5,0,0,1-.481-.51821l.06147-1.6507-1.64371.0651a.5.5,0,0,1-.51941-.47981l0-.00027L8.5078,7.8715a.5.5,0,0,1,.4799-.51914l2.72182-.10748a.5.5,0,0,1,.51933.47989q.00075.01918,0,.03837L12.127,10.49261A.5.5,0,0,1,11.60882,10.97362Z"
+                  fill="var(--docum-theme)"></path>
+                <path
+                  d="M5.64028,13.31526,5.747,10.59234a.5.5,0,0,1,.51916-.48l.499.01952a.5.5,0,0,1,.48009.519l-.06361,1.645,1.6497-.06147a.5.5,0,0,1,.51827.481v.00006l.01855.49962a.5.5,0,0,1-.4811.51821h0l-2.72861.10114a.5.5,0,0,1-.51818-.48113Q5.63954,13.33432,5.64028,13.31526Z"
+                  fill="var(--docum-theme)"></path>
+              </g>
+            </svg>
+            <svg class="mainToolbarImage" focusable="false" aria-hidden="true" role="presentation"
+              style="width:5px;height:5px;margin-top:-3px;margin-left:16px;">
+              <path
+                d="M4.74.01a.25.25 0 0 0-.177.073l-4.48 4.48a.25.25 0 0 0 .177.427h4.48a.25.25 0 0 0 .25-.25V.26a.25.25 0 0 0-.25-.25z"
+                style="fill: var(--docum-theme);"></path>
+              <path
+                d="M5.74.01a.25.25 0 0 0-.177.073l-5.48 5.48a.25.25 0 0 0 .177.427h5.48a.25.25 0 0 0 .25-.25V.26a.25.25 0 0 0-.25-.25z"
+                style="fill: var(--docum-theme);"></path>
+            </svg>
+          </button>
+
+        </div>
+      </div>
+
+      <div id="viewerContainer" tabindex="0">
+        <div id="viewer" class="pdfViewer"></div>
+      </div>
+    </div> <!-- mainContainer -->
+
+    <div id="dialogContainer">
+      <dialog id="passwordDialog">
+        <div class="row">
+          <label for="password" id="passwordText" data-l10n-id="password_label">Enter the password to open this PDF
+            file:</label>
+        </div>
+        <div class="row">
+          <input type="password" id="password" class="toolbarField">
+        </div>
+        <div class="buttonRow">
+          <button id="passwordCancel" class="dialogButton"><span data-l10n-id="password_cancel">Cancel</span></button>
+          <button id="passwordSubmit" class="dialogButton"><span data-l10n-id="password_ok">OK</span></button>
+        </div>
+      </dialog>
+      <dialog id="documentPropertiesDialog">
+        <div class="row">
+          <span id="fileNameLabel" data-l10n-id="document_properties_file_name">File name:</span>
+          <p id="fileNameField" aria-labelledby="fileNameLabel">-</p>
+        </div>
+        <div class="row">
+          <span id="fileSizeLabel" data-l10n-id="document_properties_file_size">File size:</span>
+          <p id="fileSizeField" aria-labelledby="fileSizeLabel">-</p>
+        </div>
+        <div class="separator"></div>
+        <div class="row">
+          <span id="titleLabel" data-l10n-id="document_properties_title">Title:</span>
+          <p id="titleField" aria-labelledby="titleLabel">-</p>
+        </div>
+        <div class="row">
+          <span id="authorLabel" data-l10n-id="document_properties_author">Author:</span>
+          <p id="authorField" aria-labelledby="authorLabel">-</p>
+        </div>
+        <div class="row">
+          <span id="subjectLabel" data-l10n-id="document_properties_subject">Subject:</span>
+          <p id="subjectField" aria-labelledby="subjectLabel">-</p>
+        </div>
+        <div class="row">
+          <span id="keywordsLabel" data-l10n-id="document_properties_keywords">Keywords:</span>
+          <p id="keywordsField" aria-labelledby="keywordsLabel">-</p>
+        </div>
+        <div class="row">
+          <span id="creationDateLabel" data-l10n-id="document_properties_creation_date">Creation Date:</span>
+          <p id="creationDateField" aria-labelledby="creationDateLabel">-</p>
+        </div>
+        <div class="row">
+          <span id="modificationDateLabel" data-l10n-id="document_properties_modification_date">Modification
+            Date:</span>
+          <p id="modificationDateField" aria-labelledby="modificationDateLabel">-</p>
+        </div>
+        <div class="row">
+          <span id="creatorLabel" data-l10n-id="document_properties_creator">Creator:</span>
+          <p id="creatorField" aria-labelledby="creatorLabel">-</p>
+        </div>
+        <div class="separator"></div>
+        <div class="row">
+          <span id="producerLabel" data-l10n-id="document_properties_producer">PDF Producer:</span>
+          <p id="producerField" aria-labelledby="producerLabel">-</p>
+        </div>
+        <div class="row">
+          <span id="versionLabel" data-l10n-id="document_properties_version">PDF Version:</span>
+          <p id="versionField" aria-labelledby="versionLabel">-</p>
+        </div>
+        <div class="row">
+          <span id="pageCountLabel" data-l10n-id="document_properties_page_count">Page Count:</span>
+          <p id="pageCountField" aria-labelledby="pageCountLabel">-</p>
+        </div>
+        <div class="row">
+          <span id="pageSizeLabel" data-l10n-id="document_properties_page_size">Page Size:</span>
+          <p id="pageSizeField" aria-labelledby="pageSizeLabel">-</p>
+        </div>
+        <div class="separator"></div>
+        <div class="row">
+          <span id="linearizedLabel" data-l10n-id="document_properties_linearized">Fast Web View:</span>
+          <p id="linearizedField" aria-labelledby="linearizedLabel">-</p>
+        </div>
+        <div class="buttonRow">
+          <button id="documentPropertiesClose" class="dialogButton"><span
+              data-l10n-id="document_properties_close">Close</span></button>
+        </div>
+      </dialog>
+      <dialog id="printServiceDialog" style="min-width: 200px;">
+        <div class="row">
+          <span data-l10n-id="print_progress_message">Preparing document for printing…</span>
+        </div>
+        <div class="row">
+          <progress value="0" max="100"></progress>
+          <span data-l10n-id="print_progress_percent" data-l10n-args='{ "progress": 0 }'
+            class="relative-progress">0%</span>
+        </div>
+        <div class="buttonRow">
+          <button id="printCancel" class="dialogButton"><span data-l10n-id="print_progress_close">Cancel</span></button>
+        </div>
+      </dialog>
+    </div> <!-- dialogContainer -->
+
+  </div> <!-- outerContainer -->
+  <div id="printContainer"></div>
+
+  <input type="file" id="fileInput" class="hidden">
