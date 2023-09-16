@@ -12,6 +12,7 @@
     --sidebar-width: 215px;
     --ink-color: #000;
     --pen-tip-fill: #000;
+    --titlebar-back: #fff;
 }
 
 body {
@@ -25,6 +26,10 @@ body {
 
 .fileNameV {
     color: var(--docum-theme);
+    height: env(titlebar-area-height, 45px);
+    display: flex;
+    align-items: center;
+    -webkit-app-region: drag;
 }
 
 input[type='range'] {
@@ -50,20 +55,37 @@ input[type='range'] {
     gap: 25px;
 }
 
+.toolbar{
+    height: env(titlebar-area-height);
+    width: env(titlebar-area-width);
+}
+
 #toolbarContainer {
-    height: 45px;
+    height: env(titlebar-area-height, 45px);
     box-shadow: none;
     border-bottom: 0.3px solid var(--toolbar-border-color);
     font-family: 'Ubuntu', sans-serif;
     user-select: none;
 }
 
+.toolbarContainer{
+    background: var(--titlebar-back) !important;
+}
+
 #toolbarViewer {
     display: grid;
-    height: 45px;
+    height: env(titlebar-area-height, 45px);
     align-items: center;
     padding: 0 16px;
     grid-template-columns: 92px 15px 109px auto 180px 115px;
+}
+
+.pdRt0{
+    padding-right: 0 !important;
+}
+
+.slcBack{
+    background: #3e3e3e !important;
 }
 
 #toolbarViewerLeft {
@@ -476,5 +498,6 @@ input[type="color" i]::-webkit-color-swatch {
         --toolbar-border-color: #666666;
         --button-spacer-clr: #ffffff45;
         --toggle-back-clr: #ffffff26;
+        --titlebar-back: #242424;
     }
 }
