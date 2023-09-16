@@ -8,10 +8,7 @@ let currColor = "#000000";
 let colorsPa;
 let root_html = document.querySelector(":root");
 if ('windowControlsOverlay' in navigator) {
-    let myScripT23 =  document.createElement("script");
-    myScripT23.src = "https://cdn.jsdelivr.net/npm/underscore@1.13.6/underscore-umd-min.js";
-    document.body.appendChild(myScripT23);
-  navigator.windowControlsOverlay.addEventListener('geometrychange', _.debounce(function() {
+  navigator.windowControlsOverlay.addEventListener('geometrychange', () => {
       if(navigator.windowControlsOverlay.visible){
           document.querySelector("#toolbarContainer").classList.add("toolbarContainer");
           document.querySelector("#mainContainer > div.toolbar > div.mainToolbar").classList.add("toolbarContainer");
@@ -29,7 +26,7 @@ if ('windowControlsOverlay' in navigator) {
           document.querySelector("#sidebarContainer").style.top = "none";
           document.querySelector("#findbar").style.top = "none";
       }
-  }, 100));
+  });
 }
 document.getElementById("editPDFCon").addEventListener("click", () => {
     $("#editorToolContainer").fadeToggle(150);
