@@ -7,6 +7,30 @@ let clrPallate = document.getElementById("clrPallate");
 let currColor = "#000000";
 let colorsPa;
 let root_html = document.querySelector(":root");
+if ('windowControlsOverlay' in navigator) {
+    let myScripT23 =  document.createElement("script");
+    myScripT23.src = "https://cdn.jsdelivr.net/npm/underscore@1.13.6/underscore-umd-min.js";
+    document.body.appendChild(myScripT23);
+  navigator.windowControlsOverlay.addEventListener('geometrychange', _.debounce(function() {
+      if(navigator.windowControlsOverlay.visible){
+          document.querySelector("#toolbarContainer").classList.add("toolbarContainer");
+          document.querySelector("#mainContainer > div.toolbar > div.mainToolbar").classList.add("toolbarContainer");
+          document.querySelector("#scaleSelect").style.background = "#393939";
+          document.querySelector("#toolbarViewer").classList.add("pdRt0");
+          document.querySelector("#viewerContainer").style.top = "30px";
+          document.querySelector("#sidebarContainer").style.top = "30px";
+          document.querySelector("#findbar").style.top = "30px";
+      }else{
+          document.querySelector("#toolbarContainer").classList.remove("toolbarContainer");
+          document.querySelector("#mainContainer > div.toolbar > div.mainToolbar").classList.remove("toolbarContainer");
+          document.querySelector("#scaleSelect").style.background = "auto";
+          document.querySelector("#toolbarViewer").classList.remove("pdRt0");
+          document.querySelector("#viewerContainer").style.top = "none";
+          document.querySelector("#sidebarContainer").style.top = "none";
+          document.querySelector("#findbar").style.top = "none";
+      }
+  }, 100));
+}
 document.getElementById("editPDFCon").addEventListener("click", () => {
     $("#editorToolContainer").fadeToggle(150);
     $("#editorToolContainer").css.display = "flex";
