@@ -38,11 +38,12 @@
             "sizes": "48x48"
         }
     ],
-    "id": "/",
+    "id": "/PDFViewer",
     "start_url": "/PDFViewer",
     "background_color": "#000",
     "theme": "",
     "display": "standalone",
     "scope": "/",
-    "description": "View PDF and Annotate Them"
+    "description": "View PDF and Annotate Them",
+    "display_override": ["window-controls-overlay"]
 }
