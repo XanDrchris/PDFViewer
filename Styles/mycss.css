@@ -13,6 +13,7 @@
     --ink-color: #000;
     --pen-tip-fill: #000;
     --titlebar-back: #fff;
+    --viewer-top: 45px;
 }
 
 body {
@@ -55,7 +56,7 @@ input[type='range'] {
     gap: 25px;
 }
 
-.toolbar{
+.toolbar {
     height: env(titlebar-area-height);
     width: env(titlebar-area-width);
 }
@@ -68,7 +69,7 @@ input[type='range'] {
     user-select: none;
 }
 
-.toolbarContainer{
+.toolbarContainer {
     background: var(--titlebar-back) !important;
 }
 
@@ -80,11 +81,11 @@ input[type='range'] {
     grid-template-columns: 92px 15px 109px auto 180px 115px;
 }
 
-.pdRt0{
+.pdRt0 {
     padding-right: 0 !important;
 }
 
-.slcBack{
+.slcBack {
     background: #3e3e3e !important;
 }
 
@@ -104,6 +105,7 @@ input[type='range'] {
 
 #sidebarContainer {
     inset-block: 45px 0;
+    top: var(--viewer-top);
 }
 
 #toolbarSidebar {
@@ -146,6 +148,7 @@ input[type='range'] {
 
 #viewerContainer {
     inset: 45px 0 0;
+    top: var(--viewer-top);
 }
 
 .splitToolbarButtonSeparator {
@@ -199,7 +202,7 @@ input[type='range'] {
 }
 
 .findbar {
-    top: 45px;
+    top: var(--viewer-top);
     font-family: 'Ubuntu', sans-serif;
 }
 

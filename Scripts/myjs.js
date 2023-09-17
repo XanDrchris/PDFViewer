@@ -8,25 +8,21 @@ let currColor = "#000000";
 let colorsPa;
 let root_html = document.querySelector(":root");
 if ('windowControlsOverlay' in navigator) {
-  navigator.windowControlsOverlay.addEventListener('geometrychange', () => {
-      if(navigator.windowControlsOverlay.visible){
-          document.querySelector("#toolbarContainer").classList.add("toolbarContainer");
-          document.querySelector("#mainContainer > div.toolbar > div.mainToolbar").classList.add("toolbarContainer");
-          document.querySelector("#scaleSelect").style.background = "#393939";
-          document.querySelector("#toolbarViewer").classList.add("pdRt0");
-          document.querySelector("#viewerContainer").style.top = "30px";
-          document.querySelector("#sidebarContainer").style.top = "30px";
-          document.querySelector("#findbar").style.top = "30px";
-      }else{
-          document.querySelector("#toolbarContainer").classList.remove("toolbarContainer");
-          document.querySelector("#mainContainer > div.toolbar > div.mainToolbar").classList.remove("toolbarContainer");
-          document.querySelector("#scaleSelect").style.background = "auto";
-          document.querySelector("#toolbarViewer").classList.remove("pdRt0");
-          document.querySelector("#viewerContainer").style.top = "none";
-          document.querySelector("#sidebarContainer").style.top = "none";
-          document.querySelector("#findbar").style.top = "none";
-      }
-  });
+    navigator.windowControlsOverlay.addEventListener('geometrychange', () => {
+        if (navigator.windowControlsOverlay.visible) {
+            document.querySelector("#toolbarContainer").classList.add("toolbarContainer");
+            document.querySelector("#mainContainer > div.toolbar > div.mainToolbar").classList.add("toolbarContainer");
+            document.querySelector("#scaleSelect").style.background = "#393939";
+            document.querySelector("#toolbarViewer").classList.add("pdRt0");
+            root_html.style.setProperty("--viewer-top", "30px");
+        } else {
+            document.querySelector("#toolbarContainer").classList.remove("toolbarContainer");
+            document.querySelector("#mainContainer > div.toolbar > div.mainToolbar").classList.remove("toolbarContainer");
+            document.querySelector("#scaleSelect").style.background = "auto";
+            document.querySelector("#toolbarViewer").classList.remove("pdRt0");
+            root_html.style.setProperty("--viewer-top", "45px");
+        }
+    });
 }
 document.getElementById("editPDFCon").addEventListener("click", () => {
     $("#editorToolContainer").fadeToggle(150);
