@@ -5,6 +5,8 @@
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 
 tasks:
-  - init: gem update --system
-  - init: gem install jekyll bundler
-  - init: bundle install
+  - name: Jekyll Build
+    init: |
+      gem update --system
+      gem install jekyll bundler
+      bundle install
