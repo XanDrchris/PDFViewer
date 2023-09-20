@@ -12115,7 +12115,7 @@ class Toolbar {
       // }).then(msg => {
       //   items.numPages.textContent = msg;
       // });
-      items.numPages.textContent = pageNumber+"\r\n"+"of"+"\r\n"+pageCount;
+      items.numPages.innerHTML = pageNumber+"<br>"+"<strong>of</strong>"+"<br>"+pagesCount;
     } else {
       items.pageNumber.value = pageNumber;
     }

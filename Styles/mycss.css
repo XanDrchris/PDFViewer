@@ -199,6 +199,8 @@ input[type='range'] {
 
 .toolbarLabel {
     margin: -10px 0;
+    text-align: center;
+    line-height: 150%;
 }
 
 .findbar {
