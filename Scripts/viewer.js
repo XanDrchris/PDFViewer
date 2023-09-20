@@ -9795,7 +9795,7 @@ exports.NullL10n = void 0;
 exports.getL10nFallback = getL10nFallback;
 const DEFAULT_L10N_STRINGS = {
   of_pages: "of {{pagesCount}}",
-  page_of_pages: "({{pageNumber}} of {{pagesCount}})",
+  page_of_pages: "{{pageNumber}}"+"\r\n"+"of"+"\r\n"+"{{pagesCount}}",
   document_properties_kb: "{{size_kb}} KB ({{size_b}} bytes)",
   document_properties_mb: "{{size_mb}} MB ({{size_b}} bytes)",
   document_properties_date_string: "{{date}}, {{time}}",
