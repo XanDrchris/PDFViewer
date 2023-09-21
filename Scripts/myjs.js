@@ -145,3 +145,17 @@ document.querySelector("#clrTogDiv > div.opaClrDv2 > button.choosePlt.btnSlcTd")
 Bg.on("color", (ev) => {
     triggerInput(document.querySelector("#editorInkColor"), ev.hex);
 })
+document.getElementById("AppName").addEventListener("click",()=>{
+    closeIntro();
+})
+document.getElementById("DevIntroClose").addEventListener("click",()=>{
+    closeIntro();
+})
+function closeIntro(){
+    let dialog = document.getElementById("DevIntro");
+    if(dialog.classList.contains("hidden")){
+        dialog.classList.remove("hidden");
+    }else{
+        dialog.classList.add("hidden");
+    }
+}
