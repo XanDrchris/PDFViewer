@@ -2,9 +2,9 @@ self.addEventListener('install', event => {
     console.log("Service Worker install Event");
     event.waitUntil(
         caches.open(cacheName)
-        .then(function(cache){
-            return cache.addAll(resourcesToPreCache);
-        })
+            .then(function (cache) {
+                return cache.addAll(resourcesToPreCache);
+            })
     )
 })
 const cacheName = 'PDFViewer-v1.0.0';
