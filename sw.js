@@ -2,12 +2,15 @@ self.addEventListener('install', event => {
     console.log("Service Worker install Event");
     event.waitUntil(
         caches.open(cacheName)
-            .then(function (cache) {
-                return cache.addAll(resourcesToPreCache);
-            })
+            .then((cache) =>
+                cache.addAll(resourcesToPreCache)
+            )
     )
 })
-const cacheName = 'PDFViewer-v1.0.0';
+self.addEventListener('activate', event => {
+    console.log("SErvice Wroker Activatedd");
+})
+const cacheName = 'PDFViewer-v1';
 const resourcesToPreCache = [
     '/PDFViewer/',
     '/PDFViewer/index.html',
@@ -49,8 +52,14 @@ const resourcesToPreCache = [
     '/PDFViewer/Images/loading-icon.gif',
     '/PDFViewer/Images/loading.svg',
 ];
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', (event) => {
+    console.log('Fetch intercepted for:', event.request.url);
     event.respondWith(
-        caches.match(event.request) || fetch(event.request)
-    )
-})
+        caches.match(event.request).then((cachedResponse) => {
+            if (cachedResponse) {
+                return cachedResponse;
+            }
+            return fetch(event.request);
+        }),
+    );
+});
