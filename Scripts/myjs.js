@@ -7,16 +7,18 @@ let clrPallate = document.getElementById("clrPallate");
 let currColor = "#000000";
 let colorsPa;
 let root_html = document.querySelector(":root");
-if (!('serviceWorker' in navigator)) {
-    console.log("Service Worker not supported :(");
-}
-navigator.serviceWorker.register('../PDFViewer/sw.js')
+if (('serviceWorker' in navigator)) {
+    navigator.serviceWorker.register('../PDFViewer/sw.js')
     .then(function (registration) {
         console.log('SW registered! Scope is:', registration.scope);
     })
     .catch((err) => {
         console.log("Error occured in registering the Service Worker.", err);
     })
+}else{
+    console.log("Service Worker not supported");
+}
+
 if ('windowControlsOverlay' in navigator) {
     navigator.windowControlsOverlay.addEventListener('geometrychange', () => {
         if (navigator.windowControlsOverlay.visible) {
