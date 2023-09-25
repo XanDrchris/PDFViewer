@@ -7,6 +7,18 @@ let clrPallate = document.getElementById("clrPallate");
 let currColor = "#000000";
 let colorsPa;
 let root_html = document.querySelector(":root");
+if (('serviceWorker' in navigator)) {
+    navigator.serviceWorker.register('../PDFViewer/sw.js')
+    .then(function (registration) {
+        console.log('SW registered! Scope is:', registration.scope);
+    })
+    .catch((err) => {
+        console.log("Error occured in registering the Service Worker.", err);
+    })
+}else{
+    console.log("Service Worker not supported");
+}
+
 if ('windowControlsOverlay' in navigator) {
     navigator.windowControlsOverlay.addEventListener('geometrychange', () => {
         if (navigator.windowControlsOverlay.visible) {
@@ -145,17 +157,17 @@ document.querySelector("#clrTogDiv > div.opaClrDv2 > button.choosePlt.btnSlcTd")
 Bg.on("color", (ev) => {
     triggerInput(document.querySelector("#editorInkColor"), ev.hex);
 })
-document.getElementById("AppName").addEventListener("click",()=>{
+document.getElementById("AppName").addEventListener("click", () => {
     closeIntro();
 })
-document.getElementById("DevIntroClose").addEventListener("click",()=>{
+document.getElementById("DevIntroClose").addEventListener("click", () => {
     closeIntro();
 })
-function closeIntro(){
+function closeIntro() {
     let dialog = document.getElementById("DevIntro");
-    if(dialog.classList.contains("hidden")){
+    if (dialog.classList.contains("hidden")) {
         dialog.classList.remove("hidden");
-    }else{
+    } else {
         dialog.classList.add("hidden");
     }
 }
