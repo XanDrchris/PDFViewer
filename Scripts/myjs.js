@@ -7,17 +7,17 @@ let clrPallate = document.getElementById("clrPallate");
 let currColor = "#000000";
 let colorsPa;
 let root_html = document.querySelector(":root");
-if (('serviceWorker' in navigator)) {
-    navigator.serviceWorker.register('../PDFViewer/sw.js')
-    .then(function (registration) {
-        console.log('SW registered! Scope is:', registration.scope);
-    })
-    .catch((err) => {
-        console.log("Error occured in registering the Service Worker.", err);
-    })
-}else{
-    console.log("Service Worker not supported");
-}
+// if (('serviceWorker' in navigator)) {
+//     navigator.serviceWorker.register('../PDFViewer/sw.js')
+//     .then(function (registration) {
+//         console.log('SW registered! Scope is:', registration.scope);
+//     })
+//     .catch((err) => {
+//         console.log("Error occured in registering the Service Worker.", err);
+//     })
+// }else{
+//     console.log("Service Worker not supported");
+// }
 
 if ('windowControlsOverlay' in navigator) {
     navigator.windowControlsOverlay.addEventListener('geometrychange', () => {
@@ -171,3 +171,16 @@ function closeIntro() {
         dialog.classList.add("hidden");
     }
 }
+document.querySelector("#viewerContainer").addEventListener('click', () => {
+    let targets = document.getElementsByClassName("hidden");
+    for (let i = 0; i < targets.length; i++) {
+        if (targets[i].id != "clrTogDiv") {
+            clrTogDiv.classList.add("hidden");
+        } else if (targets[i].id != "opaThkDiv") {
+            opaThkDiv.classList.add("hidden");
+        }
+    }
+})
+document.getElementById("changeTheme").addEventListener("click",()=>{
+    
+})

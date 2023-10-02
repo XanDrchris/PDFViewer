@@ -42,6 +42,11 @@ title: PDF Viewer
               styLE2.type = 'text/css';
               styLE2.setAttribute("href", "Styles/mycss.css");
               document.head.appendChild(styLE2);
+              let styLE3 = document.createElement("link");
+              styLE3.rel = 'stylesheet';
+              styLE3.type = 'text/css';
+              styLE3.setAttribute("href", "Styles/theme.css");
+              document.head.appendChild(styLE3);
             }
           )
           .then(

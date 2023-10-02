@@ -1,0 +1,12 @@
+@media(prefers-color-scheme:dark) {
+    :root {
+        --body-back-clr: #525659;
+        --dropdown-back: #262626;
+        --docum-theme: #fff;
+        --toolbar-border-color: #666666;
+        --button-spacer-clr: #ffffff45;
+        --toggle-back-clr: #ffffff26;
+        --titlebar-back: #242424;
+        --theme-iconStroke: #fff;
+    }
+}
