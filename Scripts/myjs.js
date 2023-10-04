@@ -7,6 +7,8 @@ let clrPallate = document.getElementById("clrPallate");
 let currColor = "#000000";
 let colorsPa;
 let root_html = document.querySelector(":root");
+let themeDiv = document.getElementById("themeDiv");
+let timDv = document.getElementById("tiMDv");
 // if (('serviceWorker' in navigator)) {
 //     navigator.serviceWorker.register('../PDFViewer/sw.js')
 //     .then(function (registration) {
@@ -178,9 +180,14 @@ document.querySelector("#viewerContainer").addEventListener('click', () => {
             clrTogDiv.classList.add("hidden");
         } else if (targets[i].id != "opaThkDiv") {
             opaThkDiv.classList.add("hidden");
+        } else if (targets[i].id != "themeDiv") {
+            themeDiv.classList.add("hidden");
         }
     }
 })
 document.getElementById("changeTheme").addEventListener("click",()=>{
-    
+    themeDiv.classList.toggle("hidden");
+})
+document.getElementById("TimerBtn").addEventListener("click",()=>{
+    timDv.classList.toggle("hidden");
 })
