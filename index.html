@@ -9,53 +9,54 @@ title: PDF Viewer
 <!-- Copyright (C)2023-present Xander Christopher. All rights reserved. -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title }} | {{ page.title }}</title>
-    {% include meta.html %}
-    <link rel="resource" type="application/l10n" href="locale/locale.properties">
-    <link rel="stylesheet" href="Picker/css/alwan.min.css">
-    <script src="Picker/js/alwan.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }} | {{ page.title }}</title>
+  {% include meta.html %}
+  <link rel="resource" type="application/l10n" href="locale/locale.properties">
+  <link rel="stylesheet" href="Picker/css/alwan.min.css">
+  <link rel="stylesheet" href="Styles/fonts.css">
+  <script src="Picker/js/alwan.min.js"></script>
 </head>
 
 <body tabindex="1">
-    <script>
-      let mainHTML;
-      document.addEventListener("load", (event) => {
-        let scriPT2 = document.createElement("script");
-        scriPT2.src = "Scripts/myjs.js";
-        document.body.appendChild(scriPT2);
-        let scriPT3 = document.createElement("script");
-        scriPT3.src = "Scriprs/viewer.js";
-        document.body.appendChild(scriPT3);
-      });
-      fetch("Others/base.txt").then(
-        (response) => response.text()
-          .then(
-            (text) => {
-              mainHTML = text;
-              let styLE1 = document.createElement("link");
-              styLE1.rel = 'stylesheet';
-              styLE1.type = 'text/css';
-              styLE1.setAttribute("href", "Styles/viewer.css");
-              document.head.appendChild(styLE1);
-              let styLE2 = document.createElement("link");
-              styLE2.rel = 'stylesheet';
-              styLE2.type = 'text/css';
-              styLE2.setAttribute("href", "Styles/mycss.css");
-              document.head.appendChild(styLE2);
-            }
-          )
-          .then(
-            () => {
-              document.body.innerHTML += mainHTML;
-              let scriPT1 = document.createElement("script");
-              scriPT1.src = "Scripts/pdf.js";
-              document.body.appendChild(scriPT1);
-            }
-          )
-      )
-    </script>
-  </body>
+  <script>
+    let mainHTML;
+    document.addEventListener("load", (event) => {
+      let scriPT2 = document.createElement("script");
+      scriPT2.src = "Scripts/myjs.js";
+      document.body.appendChild(scriPT2);
+      let scriPT3 = document.createElement("script");
+      scriPT3.src = "Scriprs/viewer.js";
+      document.body.appendChild(scriPT3);
+    });
+    fetch("Others/base.txt").then(
+      (response) => response.text()
+        .then(
+          (text) => {
+            mainHTML = text;
+            let styLE1 = document.createElement("link");
+            styLE1.rel = 'stylesheet';
+            styLE1.type = 'text/css';
+            styLE1.setAttribute("href", "Styles/viewer.css");
+            document.head.appendChild(styLE1);
+            let styLE2 = document.createElement("link");
+            styLE2.rel = 'stylesheet';
+            styLE2.type = 'text/css';
+            styLE2.setAttribute("href", "Styles/mycss.css");
+            document.head.appendChild(styLE2);
+          }
+        )
+        .then(
+          () => {
+            document.body.innerHTML += mainHTML;
+            let scriPT1 = document.createElement("script");
+            scriPT1.src = "Scripts/pdf.js";
+            document.body.appendChild(scriPT1);
+          }
+        )
+    )
+  </script>
+</body>
 
 </html>

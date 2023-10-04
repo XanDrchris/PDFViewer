@@ -8,7 +8,7 @@
       --scrollbar-bg-color: rgba(35, 35, 39, 1);
       --toolbar-icon-bg-color: rgba(255, 255, 255, 1);
       --toolbar-icon-hover-bg-color: rgba(255, 255, 255, 1);
-  
+
       --sidebar-narrow-bg-color: rgba(42, 42, 46, 0.9);
       --sidebar-toolbar-bg-color: rgba(50, 50, 52, 1);
       --toolbar-bg-color: rgba(56, 56, 61, 1);
@@ -36,24 +36,25 @@
       --doorhanger-separator-color: rgba(92, 92, 97, 1);
       --dialog-button-bg-color: rgba(92, 92, 97, 1);
       --dialog-button-hover-bg-color: rgba(115, 115, 115, 1);
-  
+
       /* This image is used in <input> elements, which unfortunately means that
        * the `mask-image` approach used with all of the other images doesn't work
        * here; hence why we still have two versions of this particular image. */
       --loading-icon: url(../Images/loading-dark.svg);
     }
-  
+
     :root {
-        --body-back-clr: #525659;
-        --dropdown-back: #262626;
-        --docum-theme: #fff;
-        --toolbar-border-color: #666666;
-        --button-spacer-clr: #ffffff45;
-        --toggle-back-clr: #ffffff26;
-        --titlebar-back: #242424;
-        --theme-iconStroke: #fff;
-        --back-color2: #333;
-        --shadowC: #4a4a4a;
-        --box-shadowB: none;
-        --borderA: 2px solid #4d4d4d;
+      --body-back-clr: #525659;
+      --dropdown-back: #262626;
+      --docum-theme: #fff;
+      --toolbar-border-color: #666666;
+      --button-spacer-clr: #ffffff45;
+      --toggle-back-clr: #ffffff26;
+      --titlebar-back: #242424;
+      --theme-iconStroke: #fff;
+      --back-color2: #333;
+      --shadowC: #4a4a4a;
+      --box-shadowB: none;
+      --borderA: 2px solid #4d4d4d;
+      --strA: #f2f2f24d;
     }

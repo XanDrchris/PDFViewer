@@ -13,17 +13,17 @@ let colorsPa;
 let root_html = document.querySelector(":root");
 let themeDiv = document.getElementById("themeDiv");
 let timDv = document.getElementById("tiMDv");
-// if (('serviceWorker' in navigator)) {
-//     navigator.serviceWorker.register('../PDFViewer/sw.js')
-//     .then(function (registration) {
-//         console.log('SW registered! Scope is:', registration.scope);
-//     })
-//     .catch((err) => {
-//         console.log("Error occured in registering the Service Worker.", err);
-//     })
-// }else{
-//     console.log("Service Worker not supported");
-// }
+if (('serviceWorker' in navigator)) {
+    navigator.serviceWorker.register('../PDFViewer/sw.js')
+    .then(function (registration) {
+        // console.log('SW registered! Scope is:', registration.scope);
+    })
+    .catch((err) => {
+        console.log("Error occured in registering the Service Worker.", err);
+    })
+}else{
+    console.log("Service Worker not supported");
+}
 let styLE4 = document.createElement("link");
 styLE4.rel = 'stylesheet';
 styLE4.type = 'text/css';
@@ -213,9 +213,13 @@ document.getElementById("TimerBtn").addEventListener("click", () => {
 const timerWorker = new Worker('Scripts/timer.worker.js');
 timerWorker.onmessage = (e) => {
     if (e.data == "Completed") {
-        console.log("Timer Completed");
         pauseBtn.classList.add("hidden");
-        startBtn.classList.remove("hidden");
+        startBtn.classList.remove("hidden")
+        resetBtn.classList.add("hidden");
+        resumeBtn.classList.add("hidden");
+        shoTmi.classList.add("hidden");
+        inpTmi.classList.remove("hidden");
+        fullScr.disabled = true;
     }
     if (e.data[0] == "Time") {
         displayTime(e.data[1]);
@@ -223,30 +227,39 @@ timerWorker.onmessage = (e) => {
 }
 function postM(msg) {
     timerWorker.postMessage(msg);
-    console.log("Message Posted");
 }
 function myFun1() {
-    console.log("nkcd");
     clearInterval(INterval);
     postM("Comp");
 }
+let totalTime, pipW;
 let hrsSho = document.getElementById("hrsSho");
 let minSho = document.getElementById("minSho");
 let secSho = document.getElementById("secSho");
+let hrsSho2 = document.getElementById("hrsSho2");
+let minSho2 = document.getElementById("minSho2");
+let secSho2 = document.getElementById("secSho2");
 let shoTmi = document.getElementById("shoTmI");
 let inpTmi = document.getElementById("inpTmI");
+let tmHr = document.getElementById("tmHr");
+let tmMn = document.getElementById("tmMn");
+let tmSc = document.getElementById("tmSc");
 let startBtn = document.getElementById("strtBtn");
 let pauseBtn = document.getElementById("pausBtn");
 let resumeBtn = document.getElementById("resmBtn");
 let resetBtn = document.getElementById("rstBtn");
+let circ = document.getElementById("timerCir");
+let circ2 = document.getElementById("timerCir2");
 startBtn.addEventListener("click", () => {
     let givenTime = getTime();
-    console.log(givenTime);
     setTime(givenTime);
     displayTime(givenTime);
     startBtn.classList.add("hidden");
     pauseBtn.classList.remove("hidden");
     resetBtn.classList.remove("hidden");
+    circ.style.strokeDashoffset = 703;
+    circ2.style.strokeDashoffset = 703;
+    fullScr.disabled = false;
 })
 pauseBtn.addEventListener("click", () => {
     postM("Pause");
@@ -258,19 +271,36 @@ resumeBtn.addEventListener("click", () => {
     resumeBtn.classList.add("hidden");
     pauseBtn.classList.remove("hidden");
 })
+resetBtn.addEventListener("click", () => {
+    postM("Reset");
+    startBtn.classList.remove("hidden");
+    pauseBtn.classList.add("hidden");
+    resetBtn.classList.add("hidden");
+    resumeBtn.classList.add("hidden");
+    shoTmi.classList.add("hidden");
+    inpTmi.classList.remove("hidden");
+    circ.style.strokeDashoffset = 703;
+    circ2.style.strokeDashoffset = 703;
+    fullScr.disabled = true;
+})
 function convertTime(hrs, min, sec) {
     return hrs * 3600 + min * 60 + sec;
 }
 function getTime() {
-    let time = 60;
-    return time;
+    let hRs = tmHr.valueAsNumber;
+    let mIn = tmMn.valueAsNumber;
+    let sEc = tmSc.valueAsNumber;
+    if (tmHr.value == '') { hRs = 0; tmHr.value = '00'; };
+    if (tmMn.value == '') { mIn = 0; tmMn.value = '00'; };
+    if (tmSc.value == '') { sEc = 0; tmSc.value = '00'; };
+    let tlTime = hRs * 3600 + mIn * 60 + sEc;
+    totalTime = tlTime;
+    return tlTime;
 }
 function setTime(time) {
-    console.log("Hre");
     timerWorker.postMessage(["Start", time]);
 }
 function displayTime(time) {
-    console.log("nfkjd");
     let hours = Math.floor(time / 3600);
     let minutes = Math.floor((time % 3600) / 60);
     let seconds = Math.floor(time % 60);
@@ -282,19 +312,23 @@ function displayTime(time) {
     hrsSho.innerHTML = hours;
     minSho.innerHTML = minutes;
     secSho.innerHTML = seconds;
+    setCircle(703 / totalTime);
+    setPicEle(hours, minutes, seconds);
 }
 let lightThemeIn = document.querySelector("#lightTheme");
 let darkThemeIn = document.querySelector("#darkTheme");
 let sysThemeIn = document.querySelector("#systemTheme");
 let darkCSS = document.querySelector("#darkCSS");
 let sysCSS = document.querySelector("#sysCSS");
+let pipWin = document.getElementById("pipDiv");
+let fullScr = document.getElementById("fullScr");
 document.querySelectorAll(".lightTheme").forEach((item) => {
     item.addEventListener("click", () => {
         localStorage.setItem("theme", "light");
         if (darkCSS != null) {
             darkCSS.disabled = true;
         }
-        if(sysCSS != null){
+        if (sysCSS != null) {
             sysCSS.disabled = true;
         }
         lightThemeIn.checked = true;
@@ -315,7 +349,7 @@ document.querySelectorAll(".darkTheme").forEach((item) => {
             styLE5.setAttribute("href", "Styles/darkTheme.css");
             document.head.appendChild(styLE5);
         }
-        if(sysCSS != null){
+        if (sysCSS != null) {
             sysCSS.disabled = true;
         }
         lightThemeIn.checked = false;
@@ -329,9 +363,9 @@ document.querySelectorAll(".systemTheme").forEach((item) => {
         if (darkCSS != null) {
             darkCSS.disabled = true;
         }
-        if(sysCSS != null){
+        if (sysCSS != null) {
             sysCSS.disabled = false;
-        }else{
+        } else {
             let styLE5 = document.createElement("link");
             styLE5.rel = 'stylesheet';
             styLE5.type = 'text/css';
@@ -343,4 +377,58 @@ document.querySelectorAll(".systemTheme").forEach((item) => {
         darkThemeIn.checked = false;
         sysThemeIn.checked = true;
     })
+})
+function setCircle(time) {
+    circ.style.strokeDashoffset -= time;
+    if (documentPictureInPicture.window) {
+        circ2.style.strokeDashoffset -= time;
+    }
+}
+function setPicEle(hours, minutes, seconds) {
+    if (documentPictureInPicture.window) {
+        hrsSho2.innerHTML = hours;
+        minSho2.innerHTML = minutes;
+        secSho2.innerHTML = seconds;
+    }
+}
+document.getElementById("pipBtn").addEventListener("click", showPicInPic);
+async function showPicInPic() {
+    pipW = await documentPictureInPicture.requestWindow({
+        width: 260,
+        height: 260,
+    });
+
+    let style1 = document.createElement("link");
+    style1.rel = 'stylesheet';
+    style1.type = 'text/css';
+    style1.setAttribute("href", "Styles/mycss.css");
+    let style2 = document.createElement("style");
+    style2.textContent = "body{display:flex;align-items:center;justify-content:center;";
+    pipW.document.body.style.backgroundColor = "var(--toolbar-bg-color)";
+    pipW.document.head.appendChild(style2);
+    pipW.document.head.appendChild(style1);
+    let style3 = document.createElement("link");
+    style3.rel = 'stylesheet';
+    style3.type = 'text/css';
+    if (localStorage.getItem("theme") == "dark") {
+        style3.setAttribute("href", "Styles/darkTheme.css");
+    } else if (localStorage.getItem("theme") != "light") {
+        style3.setAttribute("href", "Styles/sysTheme.css");
+    }
+    pipW.document.head.appendChild(style3);
+    pipW.document.body.append(pipWin);
+    pipW.addEventListener("pagehide", (event) => {
+        const pipWin = event.target.querySelector("#pipDiv");
+        document.body.append(pipWin);
+    });
+}
+fullScr.addEventListener("click", () => {
+    shoTmi.requestFullscreen();
+})
+shoTmi.addEventListener("fullscreenchange", () => {
+    if (document.fullscreenElement) {
+        shoTmi.classList.add("fullSho");
+    } else {
+        shoTmi.classList.remove("fullSho");
+    }
 })

@@ -235,12 +235,10 @@
 					<div>sec</div>
 				</div>
 			</div>
-			<noscript><svg width="240" height="240" viewBox="0 0 240 240" style="position:absolute;opacity:0.4;">
-					<circle cx="120" cy="120" r="112" stroke-width="16px" class="sc-pYA-dN bsRGkV"></circle>
-					<circle cx="120" cy="120" r="112" stroke-width="16px" transform="rotate(-90 120 120)"
-						class="sc-oUcyK eOPyHF" style="stroke-dasharray: 703.717; stroke-dashoffset: 292.238;"></circle>
-				</svg></noscript>
-			<canvas width="240" height="240" id="myCan" style="transform:rotate(270deg);"></canvas>
+			<svg width="240" height="240" viewBox="0 0 240 240" style="position:absolute;">
+                <circle cx="120" cy="120" r="112" stroke-width="16px" class="sc-pYA-dN bsRGkV"></circle>
+                <circle id="timerCir" cx="120" cy="120" r="112" stroke-width="16px" transform="rotate(-90 120 120)" class="sc-oUcyK eOPyHF" style="stroke-dasharray: 703.717; stroke-dashoffset: 703;"></circle>
+            </svg>
 		</div>
 		<div class="timDv6">
 			<button class="rstB hidden" id="rstBtn">Reset</button>
@@ -248,7 +246,48 @@
 			<button class="rstB PauB hidden" id="resmBtn">Resume</button>
 			<button class="rstB PauB" id="strtBtn">Start</button>
 		</div>
+    <button class="toolbarButton" id="pipBtn" title="Picture In Picture" style="position:absolute;top:10px;right:10px;">
+      <svg width="22px" height="18px" viewBox="6.5 6 21.5 21.5">
+        <path d="M25,17 L17,17 L17,23 L25,23 L25,17 L25,17 Z M29,25 L29,10.98 C29,9.88 28.1,9 27,9 L9,9 C7.9,9 7,9.88 7,10.98 L7,25 C7,26.1 7.9,27 9,27 L27,27 C28.1,27 29,26.1 29,25 L29,25 Z M27,25.02 L9,25.02 L9,10.97 L27,10.97 L27,25.02 L27,25.02 Z" fill="var(--docum-theme)"></path>
+      </svg>
+    </button>
+    <button class="toolbarButton" id="fullScr" title="Full Screen" style="position:absolute;top:45px;right:10px;" disabled>
+      <svg viewBox="0 0 36 36" style="fill: var(--docum-theme);">
+        <g>
+          <path d="m 10,16 2,0 0,-4 4,0 0,-2 L 10,10 l 0,6 0,0 z"></path>
+        </g>
+        <g>
+          <path d="m 20,10 0,2 4,0 0,4 2,0 L 26,10 l -6,0 0,0 z"></path>
+        </g>
+        <g>
+          <path d="m 24,24 -4,0 0,2 L 26,26 l 0,-6 -2,0 0,4 0,0 z"></path>
+        </g>
+        <g>
+          <path d="M 12,20 10,20 10,26 l 6,0 0,-2 -4,0 0,-4 0,0 z"></path>
+        </g>
+      </svg>
+    </button>
 	</div>
+  <div class="timDv2 hidden" id="pipDiv">
+    <div class="timDv3">
+      <div class="timDv4">
+					<div id="hrsSho2">00</div>
+					<div>:</div>
+					<div id="minSho2">00</div>
+					<div>:</div>
+					<div id="secSho2">00</div>
+				</div>
+        <div class="timDv4 timDv5">
+					<div>hr</div>
+					<div>min</div>
+					<div>sec</div>
+				</div>
+    </div>
+    <svg width="240" height="240" viewBox="0 0 240 240" style="position:absolute;">
+                <circle cx="120" cy="120" r="112" stroke-width="16px" class="sc-pYA-dN bsRGkV"></circle>
+                <circle id="timerCir2" cx="120" cy="120" r="112" stroke-width="16px" transform="rotate(-90 120 120)" class="sc-oUcyK eOPyHF" style="stroke-dasharray: 703.717; stroke-dashoffset: 0.0245815;"></circle>
+            </svg>
+  </div>
       <div id="editorFreeTextParamsToolbar" class="editorParamsToolbar hidden doorHangerRight">
         <div class="editorParamsToolbarContainer">
           <div class="editorParamsSetter">
