@@ -1,3 +1,5 @@
+// Copyright (C)2023-present Xander Christopher. All right reserved.
+
 self.addEventListener("install", (e) => {
     console.log("Service Worker Installed");
     // e.waitUntil(

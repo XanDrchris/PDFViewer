@@ -1,3 +1,7 @@
+// Copyright (C)2023-present Xander Christopher.
+// All Rights Reserves.
+// See LICENSE before using this Code.
+
 let opaThkDiv = document.getElementById("opaThkDiv");
 let clrTogBut = document.getElementById("clrTogBut");
 let opaThkDiv2 = $("#opaThkDiv");
@@ -20,7 +24,22 @@ let timDv = document.getElementById("tiMDv");
 // }else{
 //     console.log("Service Worker not supported");
 // }
-
+let styLE4 = document.createElement("link");
+styLE4.rel = 'stylesheet';
+styLE4.type = 'text/css';
+if (localStorage.getItem("theme") == "dark") {
+    styLE4.setAttribute("id", "darkCSS");
+    styLE4.setAttribute("href", "Styles/darkTheme.css");
+    document.head.appendChild(styLE4);
+    document.querySelector("#darkTheme").checked = true;
+} else if (localStorage.getItem("theme") == "light") {
+    document.querySelector("#lightTheme").checked = true;
+} else {
+    styLE4.setAttribute("id", "sysCSS");
+    styLE4.setAttribute("href", "Styles/sysTheme.css");
+    document.head.appendChild(styLE4);
+    document.querySelector("#systemTheme").checked = true;
+}
 if ('windowControlsOverlay' in navigator) {
     navigator.windowControlsOverlay.addEventListener('geometrychange', () => {
         if (navigator.windowControlsOverlay.visible) {
@@ -185,9 +204,143 @@ document.querySelector("#viewerContainer").addEventListener('click', () => {
         }
     }
 })
-document.getElementById("changeTheme").addEventListener("click",()=>{
+document.getElementById("changeTheme").addEventListener("click", () => {
     themeDiv.classList.toggle("hidden");
 })
-document.getElementById("TimerBtn").addEventListener("click",()=>{
+document.getElementById("TimerBtn").addEventListener("click", () => {
     timDv.classList.toggle("hidden");
+})
+const timerWorker = new Worker('Scripts/timer.worker.js');
+timerWorker.onmessage = (e) => {
+    if (e.data == "Completed") {
+        console.log("Timer Completed");
+        pauseBtn.classList.add("hidden");
+        startBtn.classList.remove("hidden");
+    }
+    if (e.data[0] == "Time") {
+        displayTime(e.data[1]);
+    }
+}
+function postM(msg) {
+    timerWorker.postMessage(msg);
+    console.log("Message Posted");
+}
+function myFun1() {
+    console.log("nkcd");
+    clearInterval(INterval);
+    postM("Comp");
+}
+let hrsSho = document.getElementById("hrsSho");
+let minSho = document.getElementById("minSho");
+let secSho = document.getElementById("secSho");
+let shoTmi = document.getElementById("shoTmI");
+let inpTmi = document.getElementById("inpTmI");
+let startBtn = document.getElementById("strtBtn");
+let pauseBtn = document.getElementById("pausBtn");
+let resumeBtn = document.getElementById("resmBtn");
+let resetBtn = document.getElementById("rstBtn");
+startBtn.addEventListener("click", () => {
+    let givenTime = getTime();
+    console.log(givenTime);
+    setTime(givenTime);
+    displayTime(givenTime);
+    startBtn.classList.add("hidden");
+    pauseBtn.classList.remove("hidden");
+    resetBtn.classList.remove("hidden");
+})
+pauseBtn.addEventListener("click", () => {
+    postM("Pause");
+    pauseBtn.classList.add("hidden");
+    resumeBtn.classList.remove("hidden");
+})
+resumeBtn.addEventListener("click", () => {
+    postM("Resume");
+    resumeBtn.classList.add("hidden");
+    pauseBtn.classList.remove("hidden");
+})
+function convertTime(hrs, min, sec) {
+    return hrs * 3600 + min * 60 + sec;
+}
+function getTime() {
+    let time = 60;
+    return time;
+}
+function setTime(time) {
+    console.log("Hre");
+    timerWorker.postMessage(["Start", time]);
+}
+function displayTime(time) {
+    console.log("nfkjd");
+    let hours = Math.floor(time / 3600);
+    let minutes = Math.floor((time % 3600) / 60);
+    let seconds = Math.floor(time % 60);
+    (hours < 10) ? hours = '0' + hours : hours = hours;
+    (minutes < 10) ? minutes = '0' + minutes : minutes = minutes;
+    (seconds < 10) ? seconds = '0' + seconds : seconds = seconds;
+    inpTmi.classList.add("hidden");
+    shoTmi.classList.remove("hidden");
+    hrsSho.innerHTML = hours;
+    minSho.innerHTML = minutes;
+    secSho.innerHTML = seconds;
+}
+let lightThemeIn = document.querySelector("#lightTheme");
+let darkThemeIn = document.querySelector("#darkTheme");
+let sysThemeIn = document.querySelector("#systemTheme");
+let darkCSS = document.querySelector("#darkCSS");
+let sysCSS = document.querySelector("#sysCSS");
+document.querySelectorAll(".lightTheme").forEach((item) => {
+    item.addEventListener("click", () => {
+        localStorage.setItem("theme", "light");
+        if (darkCSS != null) {
+            darkCSS.disabled = true;
+        }
+        if(sysCSS != null){
+            sysCSS.disabled = true;
+        }
+        lightThemeIn.checked = true;
+        darkThemeIn.checked = false;
+        sysThemeIn.checked = false;
+    })
+})
+document.querySelectorAll(".darkTheme").forEach((item) => {
+    item.addEventListener("click", () => {
+        localStorage.setItem("theme", "dark");
+        if (darkCSS != null) {
+            darkCSS.disabled = false;
+        } else {
+            let styLE5 = document.createElement("link");
+            styLE5.rel = 'stylesheet';
+            styLE5.type = 'text/css';
+            styLE5.setAttribute("id", "darkCSS");
+            styLE5.setAttribute("href", "Styles/darkTheme.css");
+            document.head.appendChild(styLE5);
+        }
+        if(sysCSS != null){
+            sysCSS.disabled = true;
+        }
+        lightThemeIn.checked = false;
+        darkThemeIn.checked = true;
+        sysThemeIn.checked = false;
+    })
+})
+document.querySelectorAll(".systemTheme").forEach((item) => {
+    item.addEventListener("click", () => {
+        localStorage.setItem("theme", "system");
+        if (darkCSS != null) {
+            darkCSS.disabled = true;
+        }
+        if(sysCSS != null){
+            sysCSS.disabled = false;
+        }else{
+            let styLE5 = document.createElement("link");
+            styLE5.rel = 'stylesheet';
+            styLE5.type = 'text/css';
+            styLE5.setAttribute("id", "darkCSS");
+            styLE5.setAttribute("href", "Styles/sysTheme.css");
+            document.head.appendChild(styLE5);
+        }
+        lightThemeIn.checked = false;
+        darkThemeIn.checked = false;
+        sysThemeIn.checked = true;
+    })
 })

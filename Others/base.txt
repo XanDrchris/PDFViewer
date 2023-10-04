@@ -1,3 +1,4 @@
+<!-- Copyright (C)2023-present Xander Christopher. All rights reserved. -->
   <div id="outerContainer">
 
     <div id="sidebarContainer">
@@ -174,8 +175,8 @@
         </button>
       </div>
       <div class="editorToolBar themeBar hidden" id="themeDiv">
-        <div class="themeCont">
-          <input type="radio" name="Light Theme" id="lightTheme" class="themeInp">
+        <div class="themeCont lightTheme">
+          <input type="radio" name="Light Theme" id="lightTheme" class="themeInp lightTheme">
           <p>Light Theme</p>
           <svg class="themeImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 7" class="mainToolbarImage" width="20px" height="20px">
             <path
@@ -184,8 +185,8 @@
             <path d="M3 .5A1 1 0 003 5.5 1 1 0 003 .5" fill="#fff"/>
           </svg>
         </div>
-        <div class="themeCont">
-          <input type="radio" name="Dark Theme" id="darkTheme" class="themeInp">
+        <div class="themeCont darkTheme">
+          <input type="radio" name="Dark Theme" id="darkTheme" class="themeInp darkTheme">
           <p>Dark Theme</p>
           <svg class="themeImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 7" class="mainToolbarImage" width="20px" height="20px">
             <path
@@ -194,8 +195,8 @@
             <path d="M3 .5A1 1 0 003 5.5 1 1 0 003 .5" fill="#000"/>
           </svg>
         </div>
-        <div class="themeCont">
-          <input type="radio" name="System Theme" id="systemTheme" class="themeInp">
+        <div class="themeCont systemTheme">
+          <input type="radio" name="System Theme" id="systemTheme" class="themeInp systemTheme">
           <p>System Default</p>
           <svg width="20" height="20" viewBox="0 0 7 7" focusable="false" aria-hidden="true" role="img" style="fill: var(--docum-theme);" class="mainToolbarImage">
               <g>
@@ -214,7 +215,7 @@
       <div id="tiMDv" class="timDv hidden">
 		<div class="timDv2">
 			<div class="timDv3" style="opacity:1;">
-				<div class="timDv4" style="display:none;" id="shoTmI">
+				<div class="timDv4 hidden" id="shoTmI">
 					<div id="hrsSho">00</div>
 					<div>:</div>
 					<div id="minSho">00</div>
