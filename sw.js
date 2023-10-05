@@ -1,6 +1,6 @@
 // Copyright (C)2023-present Xander Christopher. All rights reserved.
 
-const cacheName = "PDFViewerv1";
+const cacheName = "PDFViewerv2";
 const resources = [
     '/PDFViewer/',
     '/PDFViewer/index.html',
@@ -50,7 +50,7 @@ const resources = [
     '/PDFViewer/Others/4iCs6KVjbNBYlgoKfA72j00.woff2',
     '/PDFViewer/Others/4iCs6KVjbNBYlgoKfw72.woff2',
     '/PDFViewer/Others/manifest.json',
-    '/PDFViewer/Others/Kibo (ISS module).pdf',
+    '/PDFViewer/Others/Kibo(ISSmodule).pdf',
 ]
 
 self.addEventListener("install", (ev) => {
@@ -92,6 +92,7 @@ self.addEventListener("activate", (e) => {
 })
 
 self.addEventListener("fetch", (e) => {
+    console.log('Fetching Data');
     e.respondWith(
         (async () => {
             const r = await caches.match(e.request);
@@ -99,8 +100,8 @@ self.addEventListener("fetch", (e) => {
                 return r;
             }
             const response = await fetch(e.request);
-            // const cache = await caches.open(cacheName);
-            // cache.put(e.request, response.clone());
+            const cache = await caches.open(cacheName);
+            cache.put(e.request, response.clone());
             return response;
         })(),
     );
