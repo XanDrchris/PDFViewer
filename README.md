@@ -1,9 +1,11 @@
 # Ample | PDFViewer
-#### It is currently in developmental stage so may contains bugs. If you find any, just open an issue.
+<b>It is currently in developmental stage so may contains bugs. If you find any, just open an issue.</b>
+
 ---
 It is an installable Web App capable of viewing and annotating PDFs.
 
 This is a open source project, I welcome your contributions and suggestions. And feel free to use the code according to [LICENSE](https://github.com/XandrChris/PDFViewer/blob/main/LICENSE).
+<b>Recommended to use Chrome version >116</b>
 
 ### Online Demo
 The online demo is hosted on Github Pages:
