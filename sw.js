@@ -1,3 +1,5 @@
+// Copyright (C)2023-present Xander Christopher. All right reserved.
+
 self.addEventListener("install", (e) => {
     console.log("Service Worker Installed");
     // e.waitUntil(
@@ -23,12 +25,16 @@ self.addEventListener("activate", (e) => {
     //     }),
     // );
 });
-const cacheName = 'PDFViewer-v1';
+const cacheName = 'PDFViewer-v2';
 // const resourcesToPreCache = [
 //     '/PDFViewer/',
 //     '/PDFViewer/index.html',
 //     '/PDFViewer/Styles/mycss.css',
 //     '/PDFViewer/Styles/viewer.css',
+//     '/PDFViewer/Styles/darkTheme.css',
+//     '/PDFViewer/Styles/fonts.css',
+//     '/PDFViewer/Styles/sysTheme.css',
+//     '/PDFViewer/Scripts/timer.worker.js',
 //     '/PDFViewer/Scripts/myjs.js',
 //     '/PDFViewer/Scripts/pdf.js',
 //     '/PDFViewer/Scripts/pdf.worker.js',
@@ -64,9 +70,12 @@ const cacheName = 'PDFViewer-v1';
 //     '/PDFViewer/Images/loading-dark.svg',
 //     '/PDFViewer/Images/loading-icon.gif',
 //     '/PDFViewer/Images/loading.svg',
-//     'https://fonts.googleapis.com/css2?family=Ubuntu&display=swap',
-//     'https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKcQ72j00.woff2',
-//     'https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKfw72.woff2',
+//     '/PDFViewer/Others/4iCs6KVjbNBYlgoKcg72j00.woff2',
+//     '/PDFViewer/Others/4iCs6KVjbNBYlgoKcQ72j00.woff2',
+//     '/PDFViewer/Others/4iCs6KVjbNBYlgoKcw72j00.woff2',
+//     '/PDFViewer/Others/4iCs6KVjbNBYlgoKew72j00.woff2',
+//     '/PDFViewer/Others/4iCs6KVjbNBYlgoKfA72j00.woff2',
+//     '/PDFViewer/Others/4iCs6KVjbNBYlgoKfw72.woff2',
 // ];
 self.addEventListener("fetch", (e) => {
     e.respondWith(
