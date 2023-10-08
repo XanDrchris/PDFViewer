@@ -49,6 +49,8 @@ const resources = [
     '/PDFViewer/Others/4iCs6KVjbNBYlgoKew72j00.woff2',
     '/PDFViewer/Others/4iCs6KVjbNBYlgoKfA72j00.woff2',
     '/PDFViewer/Others/4iCs6KVjbNBYlgoKfw72.woff2',
+    '/PDFViewer/Others/manifest.json',
+    '/PDFViewer/Others/Kibo(ISSmodule).pdf',
 ]
 
 self.addEventListener("install", (ev) => {
@@ -90,6 +92,7 @@ self.addEventListener("activate", (e) => {
 })
 
 self.addEventListener("fetch", (e) => {
+    console.log('Fetching Data');
     e.respondWith(
         (async () => {
             const r = await caches.match(e.request);

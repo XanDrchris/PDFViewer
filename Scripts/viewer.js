@@ -3182,7 +3182,7 @@ const defaultOptions = {
 };
 {
   defaultOptions.defaultUrl = {
-    value: "../PDFViewer/Others/Kibō (ISS module).pdf",
+    value: "../PDFViewer/Others/Kibo(ISSmodule).pdf",
     kind: OptionKind.VIEWER
   };
   defaultOptions.disablePreferences = {
