@@ -9,7 +9,7 @@ let clrTogDiv2 = $("#clrTogDiv");
 let clrTogDiv = document.getElementById("clrTogDiv");
 let clrPallate = document.getElementById("clrPallate");
 let currColor = "#000000";
-let colorsPa;
+let colorsPa, notifAudio;
 let root_html = document.querySelector(":root");
 let themeDiv = document.getElementById("themeDiv");
 let timDv = document.getElementById("tiMDv");
@@ -24,6 +24,12 @@ if (('serviceWorker' in navigator)) {
 }else{
     console.log("Service Worker not supported");
 }
+fetch("../PDFViewer/Others/ping.txt").then(
+    (response) => response.text()
+    .then(
+        (text) => notifAudio = new Audio(text)
+    )
+)
 let styLE4 = document.createElement("link");
 styLE4.rel = 'stylesheet';
 styLE4.type = 'text/css';
@@ -209,6 +215,7 @@ document.getElementById("changeTheme").addEventListener("click", () => {
 })
 document.getElementById("TimerBtn").addEventListener("click", () => {
     timDv.classList.toggle("hidden");
+    getNotificationPermission();
 })
 const timerWorker = new Worker('Scripts/timer.worker.js');
 timerWorker.onmessage = (e) => {
@@ -220,6 +227,8 @@ timerWorker.onmessage = (e) => {
         shoTmi.classList.add("hidden");
         inpTmi.classList.remove("hidden");
         fullScr.disabled = true;
+        notifyMe();
+        notifAudio.play();
     }
     if (e.data[0] == "Time") {
         displayTime(e.data[1]);
@@ -432,3 +441,44 @@ shoTmi.addEventListener("fullscreenchange", () => {
         shoTmi.classList.remove("fullSho");
     }
 })
+function notifyMe() {
+    const options = {
+        body: "Time Up",
+        icon: "../PDFViewer/Images/apple-touch-icon48.png",
+    }
+    const title = "Ample | PDFViewer";
+    if (Notification.permission === "granted") {
+        const notification = new Notification(title, options);
+        closeNotif(notification);
+    } else if (Notification.permission !== "denied") {
+        Notification.requestPermission().then((permission) => {
+            if (permission === "granted") {
+                const notification = new Notification(title, options);
+                closeNotif(notification);
+            }
+        });
+    }
+}
+function getNotificationPermission(){
+    if (!("Notification" in window)) {
+        alert("This browser does not support desktop notification");
+    } else if (Notification.permission === "granted") {
+        // console.log("Notification Permission Granted");
+    } else if (Notification.permission !== "denied") {
+        Notification.requestPermission().then((permission) => {
+            if (permission === "granted") {
+                // console.log("Notification Permission Granted");
+            }
+        });
+    }
+}
+function closeNotif(notification){
+    notification.onclick = (e)=>{
+        e.preventDefault();
+        notification.close();
+    }
+    notification.onclose = (e)=>{
+        e.preventDefault();
+        notification.close();
+    }
+}

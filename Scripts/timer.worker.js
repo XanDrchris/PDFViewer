@@ -3,7 +3,7 @@
 (function timerW() {
     let INterval, myTime;
     onmessage = (e) => {
-        console.log("Message Recieved" + e.data);
+        // console.log("Message Recieved" + e.data);
         if (e.data[0] == "Start") {
             timer(e.data[1]);
         } else if (e.data == "Pause") {
