@@ -54,7 +54,7 @@ const resources = [
 ]
 
 self.addEventListener("install", (ev) => {
-    console.log("Service Worker Installed");
+    // console.log("Service Worker Installed");
     ev.waitUntil(
         Promise.resolve()
             .then(
@@ -92,7 +92,7 @@ self.addEventListener("activate", (e) => {
 })
 
 self.addEventListener("fetch", (e) => {
-    console.log('Fetching Data');
+    // console.log('Fetching Data');
     e.respondWith(
         (async () => {
             const r = await caches.match(e.request);
