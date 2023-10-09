@@ -1,6 +1,6 @@
 // Copyright (C)2023-present Xander Christopher. All rights reserved.
 
-const cacheName = "PDFViewerv2";
+const cacheName = "PDFViewerv2-1";
 const resources = [
     '/PDFViewer/',
     '/PDFViewer/index.html',
@@ -51,6 +51,7 @@ const resources = [
     '/PDFViewer/Others/4iCs6KVjbNBYlgoKfw72.woff2',
     '/PDFViewer/Others/manifest.json',
     '/PDFViewer/Others/Kibo(ISSmodule).pdf',
+    '/PDFViewer/Others/ping.mp3',
 ]
 
 self.addEventListener("install", (ev) => {
