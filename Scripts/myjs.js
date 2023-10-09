@@ -9,7 +9,7 @@ let clrTogDiv2 = $("#clrTogDiv");
 let clrTogDiv = document.getElementById("clrTogDiv");
 let clrPallate = document.getElementById("clrPallate");
 let currColor = "#000000";
-let colorsPa;
+let colorsPa, notifAudio;
 let root_html = document.querySelector(":root");
 let themeDiv = document.getElementById("themeDiv");
 let timDv = document.getElementById("tiMDv");
@@ -24,7 +24,12 @@ if (('serviceWorker' in navigator)) {
 }else{
     console.log("Service Worker not supported");
 }
-let notifAudio = new Audio("Others/ping.mp3");
+fetch("../PDFViewer/Others/ping.txt").then(
+    (response) => response.text()
+    .then(
+        (text) => notifAudio = new Audio(text)
+    )
+)
 let styLE4 = document.createElement("link");
 styLE4.rel = 'stylesheet';
 styLE4.type = 'text/css';
@@ -439,7 +444,7 @@ shoTmi.addEventListener("fullscreenchange", () => {
 function notifyMe() {
     const options = {
         body: "Time Up",
-        icon: "Images/apple-touch-icon48.png",
+        icon: "../PDFViewer/Images/apple-touch-icon48.png",
     }
     const title = "Ample | PDFViewer";
     if (Notification.permission === "granted") {
@@ -469,6 +474,10 @@ function getNotificationPermission(){
 }
 function closeNotif(notification){
     notification.onclick = (e)=>{
+        e.preventDefault();
+        notification.close();
+    }
+    notification.onclose = (e)=>{
         e.preventDefault();
         notification.close();
     }

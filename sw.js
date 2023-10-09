@@ -51,7 +51,7 @@ const resources = [
     '/PDFViewer/Others/4iCs6KVjbNBYlgoKfw72.woff2',
     '/PDFViewer/Others/manifest.json',
     '/PDFViewer/Others/Kibo(ISSmodule).pdf',
-    '/PDFViewer/Others/ping.mp3',
+    '/PDFViewer/Others/ping.txt',
 ]
 
 self.addEventListener("install", (ev) => {
