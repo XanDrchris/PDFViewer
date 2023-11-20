@@ -1,6 +1,6 @@
 // Copyright (C)2023-present Xander Christopher. All rights reserved.
 
-const cacheName = "PDFViewerv2-1";
+const cacheName = "PDFViewerv2-2";
 const resources = [
     '/PDFViewer/',
     '/PDFViewer/index.html',
