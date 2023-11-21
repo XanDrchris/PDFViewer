@@ -13,17 +13,17 @@ let colorsPa, notifAudio;
 let root_html = document.querySelector(":root");
 let themeDiv = document.getElementById("themeDiv");
 let timDv = document.getElementById("tiMDv");
-if (('serviceWorker' in navigator)) {
-    navigator.serviceWorker.register('../PDFViewer/sw.js')
-    .then(function (registration) {
-        // console.log('SW registered! Scope is:', registration.scope);
-    })
-    .catch((err) => {
-        console.log("Error occured in registering the Service Worker.", err);
-    })
-}else{
-    console.log("Service Worker not supported");
-}
+// if (('serviceWorker' in navigator)) {
+//     navigator.serviceWorker.register('../PDFViewer/sw.js')
+//     .then(function (registration) {
+//         // console.log('SW registered! Scope is:', registration.scope);
+//     })
+//     .catch((err) => {
+//         console.log("Error occured in registering the Service Worker.", err);
+//     })
+// }else{
+//     console.log("Service Worker not supported");
+// }
 fetch("../PDFViewer/Others/ping.txt").then(
     (response) => response.text()
     .then(

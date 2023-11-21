@@ -224,19 +224,30 @@
         <button id="editorFreeText" class="toolbarButton" disabled="disabled" title="Text" role="radio"
           aria-checked="false" aria-controls="editorFreeTextParamsToolbar" tabindex="35"
           data-l10n-id="editor_free_text2">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.15 0.1 20 20"
-            style="stroke-linecap:round;stroke-linejoin:round;" class="toolbarButtonImage mainToolbarImage">
-            <path
-              d="M.7682 2.005V19.45H19.5511V.7835H.7622V2.0022M3.2916 2.9351V6.232M3.3105 4.5267H17.1046M17.1236 2.9351V6.3268M10.223 4.5553V17.0467M8.6468 17.0467H11.8881"
-              stroke="var(--docum-theme)" stroke-width="1" fill="none" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            style="stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5;stroke:var(--docum-theme);fill:none;" class="toolbarButtonImage mainToolbarImage">
+            <g>
+                    <path stroke="none" d="M0 0h24v24H0z"></path>
+                    <line x1="4" y1="20" x2="7" y2="20"></line>
+                    <line x1="14" y1="20" x2="21" y2="20"></line>
+                    <line x1="6.9" y1="15" x2="13.8" y2="15"></line>
+                    <line x1="10.2" y1="6.3" x2="16" y2="20"></line>
+                    <polyline points="5 20 11 4 13 4 20 20"></polyline>
+                </g>
           </svg>
         </button>
         <button id="editorStamp" class="toolbarButton hidden" disabled="disabled" title="Image" role="radio"
           aria-checked="false" tabindex="34" data-l10n-id="editor_stamp">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.2 0 19.7 20" class="toolbarButtonImage mainToolbarImage">
-            <path
-              d="M.3558 8.5802V15.2547C.3782 15.9759 1.0164 16.5724 1.719 16.6132H11.3973Q11.1639 14.7909 12.3625 13.0613H1.9385C1.8142 13.0618 1.6636 12.9111 1.6643 12.8124V1.9901C1.6608 1.815 1.7798 1.6511 1.9716 1.6536H15.443C15.6528 1.6616 15.735 1.7891 15.7435 1.9167V11.1912Q16.4948 11.1319 17.0585 11.2571V1.6062C17.0451.7982 16.3729.1684 15.6704.1623H1.7321C1.0215.1553.3612.8676.3586 1.6034V8.5795M2.3943 7.4091V10.4351Q2.3975 10.5416 2.4785 10.5205 4.6198 9.917 6.5184 8.8676 6.6128 8.8051 6.4985 8.7545 4.4208 8.2651 2.5271 7.3404 2.3922 7.2842 2.3942 7.4092M2.6448 12.1896H13.2492Q14.0841 11.5374 15.0065 11.33V9.6916Q15.007 9.4503 14.7397 9.2498 13.7507 8.521 12.9361 7.6895 12.1981 6.9683 11.6593 6.6841C11.2224 6.472 10.9381 6.5399 10.4927 6.7689Q9.7079 7.1846 9.0418 7.7446 6.2729 9.9712 2.7463 11.1612 2.411 11.2988 2.4032 11.5171V11.9743Q2.4066 12.1651 2.6445 12.1899M7.0238 3.3538A1 1 0 007.0578 6.6257 1 1 0 007.0246 3.3543M15.9131 12.1523A1 1 0 0015.8799 19.9162 1 1 0 0015.9127 12.1522M16.4304 13.9569V15.4681H18.1348Q18.3394 15.4817 18.3475 15.6995V16.3644Q18.3443 16.5566 18.0967 16.5786H16.4373V18.3031Q16.4221 18.5062 16.2228 18.5078H15.5167Q15.324 18.4946 15.3173 18.2852V16.5874H13.6168Q13.4284 16.5716 13.4102 16.3946V15.6951Q13.4339 15.4981 13.617 15.4841H15.3108V13.7839Q15.3251 13.5729 15.5321 13.547H16.217Q16.416 13.5566 16.4305 13.7693V13.9575"
-              fill="var(--docum-theme)" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="toolbarButtonImage mainToolbarImage" style="stroke-width:1.25;stroke:var(--docum-theme);fill:none;">
+            <g>
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M15 8h.01"></path>
+                    <path d="M12 20h-5a3 3 0 0 1 -3 -3v-10a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v5"></path>
+                    <path d="M4 15l4 -4c.928 -.893 2.072 -.893 3 0l4 4"></path>
+                    <path d="M14 14l1 -1c.617 -.593 1.328 -.793 2.009 -.598"></path>
+                    <path d="M19 16v6"></path>
+                    <path d="M22 19l-3 3l-3 -3"></path>
+                </g>
           </svg>
         </button>
       </div>
@@ -262,18 +273,9 @@
         <div class="themeCont systemTheme">
           <input type="radio" name="System Theme" id="systemTheme" class="themeInp systemTheme">
           <p>System Default</p>
-          <svg width="20" height="20" viewBox="0 0 7 7" focusable="false" aria-hidden="true" role="img"
+          <svg width="20" height="20" viewBox="0 0 24 24" focusable="false" aria-hidden="true" role="img"
             style="fill: var(--docum-theme);" class="mainToolbarImage">
-            <g>
-              <path d="M3 0A1 1 0 003 6V5.5A1 1 0 013 .5V0" fill="var(--theme-iconStroke)">
-              </path>
-              <path d="M3 .5A1 1 0 003 5.5V.5" fill="#fff">
-              </path>
-              <path d="M3 0A1 1 0 013 6V5.5A1 1 0 003 .5V0" fill="var(--theme-iconStroke)">
-              </path>
-              <path d="M3 .5A1 1 0 013 5.5V.5" fill="#000">
-              </path>
-            </g>
+            <g><path d="M5 6h16V4H5c-1.1 0-2 .9-2 2v11H1v3h11v-3H5V6zm16 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z"></path></g>
           </svg>
         </div>
       </div>
