@@ -244,6 +244,7 @@ input[type='range'] {
 
 .toolbarButtonImage {
     width: 20px;
+    height: 20px;
 }
 
 .toolbarButton:hover .mainToolbarImage {
@@ -421,6 +422,7 @@ input[type="color" i]::-webkit-color-swatch {
 }
 
 .colorItemInp {
+    appearance: none;
     -webkit-appearance: none;
     border-radius: 50%;
     height: 24px;

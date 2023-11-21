@@ -1,4 +1,69 @@
 <!-- Copyright (C)2023-present Xander Christopher. All rights reserved. -->
+  <icons-container class="hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol id="findIcon" viewBox="0 0 18 18">
+        <g>
+          <path
+            d="M17.247,16.18649l-4.33492-4.33493a6.26629,6.26629,0,1,0-1.06055,1.06055l4.335,4.33489a.5.5,0,0,0,.7071,0l.35344-.35344A.5.5,0,0,0,17.247,16.18649ZM8,12.75A4.75,4.75,0,1,1,12.75,8,4.75,4.75,0,0,1,8,12.75Z">
+          </path>
+        </g>
+      </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol id="openFileIcon" viewBox="0 0 18 18">
+        <path
+          d="M9.257 6.351 9.44 6.534H15.819C16.159 6.534 16.546 6.716 16.87 7.04 17.193 7.363 17.375 7.748 17.375 8.09V13.909C17.375 14.225 17.192 14.609 16.855 14.944 16.518 15.282 16.132 15.466 15.818 15.466H4.182C3.83 15.466 3.442 15.285 3.124 14.966 2.806 14.648 2.625 14.261 2.625 13.909V5.182C2.625 4.831 2.806 4.446 3.125 4.128 3.445 3.807 3.835 3.625 4.182 3.625H6.53L9.256 6.351"
+          stroke-width="1.25" fill="none"></path>
+      </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol id="printFileIcon" viewBox="0 0 24 24">
+        <path
+          d="M19 8H5C3.34 8 2 9.34 2 11V17H6V21H18V17H22V11C22 9.34 20.66 8 19 8ZM16 19H8V14H16V19ZM19 12C18.45 12 18 11.55 18 11S18.45 10 19 10 20 10.45 20 11 19.55 12 19 12ZM18 3H6V7H18V3Z"
+          stroke="none"></path>
+      </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol id="themeIcon" viewBox="1.2199 1.6693 17.39 16.65">
+        <path
+          d="M14.2001 4.812A1 1 0 0013.026 12.4216 3.8 3.8 0 0017.3566 9.6144 2.97 2.97 0 0114.2001 4.812M11.3739 5.4851A1 1 0 007.0644 14.5473 4.9 4.9 0 0013.6018 12.4766M9.179 2.9193V3.599M9.1602 16.3307V17.0689M12.9197 15.1547 13.3646 15.7437M5.4098 15.1617 4.9837 15.7402M3.1397 11.9567 2.475 12.1756M3.1813 8.0598 2.4699 7.823M5.4162 4.8607 4.9573 4.2539"
+          fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol id="arrowIcon" viewBox="0 0 16 16">
+        <path
+          d="M8.35176 10.9989L13.8178 5.53391C13.876 5.47594 13.9222 5.40702 13.9537 5.33113C13.9851 5.25524 14.0013 5.17387 14.0012 5.0917C14.0011 5.00954 13.9848 4.9282 13.9531 4.85238C13.9215 4.77656 13.8751 4.70775 13.8168 4.64991C13.6991 4.53309 13.5401 4.46753 13.3743 4.46753C13.2085 4.46753 13.0494 4.53309 12.9318 4.64991L7.99776 9.58491L3.06776 4.65091C2.9494 4.53853 2.79183 4.47682 2.62863 4.47894C2.46542 4.48106 2.3095 4.54683 2.19409 4.66224C2.07868 4.77765 2.01291 4.93357 2.01079 5.09677C2.00868 5.25997 2.07039 5.41754 2.18276 5.53591L7.64776 10.9999L8.35176 10.9989Z"
+          stroke="none"></path>
+      </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol id="fullScrIcon" viewBox="0 0 36 36">
+        <g>
+          <path d="m 10,16 2,0 0,-4 4,0 0,-2 L 10,10 l 0,6 0,0 z"></path>
+        </g>
+        <g>
+          <path d="m 20,10 0,2 4,0 0,4 2,0 L 26,10 l -6,0 0,0 z"></path>
+        </g>
+        <g>
+          <path d="m 24,24 -4,0 0,2 L 26,26 l 0,-6 -2,0 0,4 0,0 z"></path>
+        </g>
+        <g>
+          <path d="M 12,20 10,20 10,26 l 6,0 0,-2 -4,0 0,-4 0,0 z"></path>
+        </g>
+      </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol id="rotateIcon" viewBox="0 0 24 24">
+        <g>
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path
+            d="M7.34 6.41L.86 12.9l6.49 6.48 6.49-6.48-6.5-6.49zM3.69 12.9l3.66-3.66L11 12.9l-3.66 3.66-3.65-3.66zm15.67-6.26C17.61 4.88 15.3 4 13 4V.76L8.76 5 13 9.24V6c1.79 0 3.58.68 4.95 2.05 2.73 2.73 2.73 7.17 0 9.9C16.58 19.32 14.79 20 13 20c-.97 0-1.94-.21-2.84-.61l-1.49 1.49C10.02 21.62 11.51 22 13 22c2.3 0 4.61-.88 6.36-2.64 3.52-3.51 3.52-9.21 0-12.72z">
+          </path>
+        </g>
+      </symbol>
+    </svg>
+  </icons-container>
   <div id="outerContainer">
 
     <div id="sidebarContainer">
@@ -79,7 +144,7 @@
         </div>
       </div>
       <div id="sidebarResizer"></div>
-    </div> <!-- sidebarContainer -->
+    </div>
 
     <div id="mainContainer">
       <div class="findbar hidden doorHanger dIfaC" id="findbar">
@@ -89,15 +154,17 @@
           <div class="splitToolbarButton">
             <button id="findPrevious" class="toolbarButton" title="Find the previous occurrence of the phrase"
               tabindex="92" data-l10n-id="find_previous">
-              <svg class="mainToolbarImage" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" style="transform:rotate(90deg);">
-              <path d="M8.35176 10.9989L13.8178 5.53391C13.876 5.47594 13.9222 5.40702 13.9537 5.33113C13.9851 5.25524 14.0013 5.17387 14.0012 5.0917C14.0011 5.00954 13.9848 4.9282 13.9531 4.85238C13.9215 4.77656 13.8751 4.70775 13.8168 4.64991C13.6991 4.53309 13.5401 4.46753 13.3743 4.46753C13.2085 4.46753 13.0494 4.53309 12.9318 4.64991L7.99776 9.58491L3.06776 4.65091C2.9494 4.53853 2.79183 4.47682 2.62863 4.47894C2.46542 4.48106 2.3095 4.54683 2.19409 4.66224C2.07868 4.77765 2.01291 4.93357 2.01079 5.09677C2.00868 5.25997 2.07039 5.41754 2.18276 5.53591L7.64776 10.9999L8.35176 10.9989Z" fill="var(--docum-theme)"></path>
-            </svg>
+              <svg class="mainToolbarImage" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="var(--docum-theme)" style="transform:rotate(90deg);">
+                <use xlink:href="#arrowIcon" />
+              </svg>
             </button>
             <button id="findNext" class="toolbarButton" title="Find the next occurrence of the phrase" tabindex="93"
               data-l10n-id="find_next">
-              <svg class="mainToolbarImage" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" style="transform:rotate(270deg)">
-              <path d="M8.35176 10.9989L13.8178 5.53391C13.876 5.47594 13.9222 5.40702 13.9537 5.33113C13.9851 5.25524 14.0013 5.17387 14.0012 5.0917C14.0011 5.00954 13.9848 4.9282 13.9531 4.85238C13.9215 4.77656 13.8751 4.70775 13.8168 4.64991C13.6991 4.53309 13.5401 4.46753 13.3743 4.46753C13.2085 4.46753 13.0494 4.53309 12.9318 4.64991L7.99776 9.58491L3.06776 4.65091C2.9494 4.53853 2.79183 4.47682 2.62863 4.47894C2.46542 4.48106 2.3095 4.54683 2.19409 4.66224C2.07868 4.77765 2.01291 4.93357 2.01079 5.09677C2.00868 5.25997 2.07039 5.41754 2.18276 5.53591L7.64776 10.9999L8.35176 10.9989Z" fill="var(--docum-theme)"></path>
-            </svg>
+              <svg class="mainToolbarImage" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="var(--docum-theme)" style="transform:rotate(270deg)">
+                <use xlink:href="#arrowIcon" />
+              </svg>
             </button>
           </div>
         </div>
@@ -114,12 +181,11 @@
           <input type="checkbox" id="findEntireWord" class="toolbarField" tabindex="97">
           <label for="findEntireWord" class="toolbarLabel" data-l10n-id="find_entire_word_label">Whole Words</label>
         </div>
-
         <div id="findbarMessageContainer" aria-live="polite" class="dIfaC">
           <span id="findResultsCount" class="toolbarLabel"></span>
           <span id="findMsg" class="toolbarLabel"></span>
         </div>
-      </div> <!-- findbar -->
+      </div>
       <div class="editorToolBar" id="editorToolContainer" style="display:none;">
         <div class="clrOpa" id="editorInkParamsToolbar">
           <button class="toolbarButton" style="background-color: var(--ink-color);width: 26px;height: 26px;"
@@ -178,116 +244,113 @@
         <div class="themeCont lightTheme">
           <input type="radio" name="Light Theme" id="lightTheme" class="themeInp lightTheme">
           <p>Light Theme</p>
-          <svg class="themeImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 7" class="mainToolbarImage" width="20px" height="20px">
-            <path
-              d="M3 0A1 1 0 003 6 1 1 0 003 0V.5A1 1 0 013 5.5 1 1 0 013 .5V0"
-              fill="var(--theme-iconStroke)" />
-            <path d="M3 .5A1 1 0 003 5.5 1 1 0 003 .5" fill="#fff"/>
+          <svg class="themeImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 7" class="mainToolbarImage"
+            width="20px" height="20px">
+            <path d="M3 0A1 1 0 003 6 1 1 0 003 0V.5A1 1 0 013 5.5 1 1 0 013 .5V0" fill="var(--theme-iconStroke)" />
+            <path d="M3 .5A1 1 0 003 5.5 1 1 0 003 .5" fill="#fff" />
           </svg>
         </div>
         <div class="themeCont darkTheme">
           <input type="radio" name="Dark Theme" id="darkTheme" class="themeInp darkTheme">
           <p>Dark Theme</p>
-          <svg class="themeImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 7" class="mainToolbarImage" width="20px" height="20px">
-            <path
-              d="M3 0A1 1 0 003 6 1 1 0 003 0V.5A1 1 0 013 5.5 1 1 0 013 .5V0"
-              fill="var(--theme-iconStroke)" />
-            <path d="M3 .5A1 1 0 003 5.5 1 1 0 003 .5" fill="#000"/>
+          <svg class="themeImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 7" class="mainToolbarImage"
+            width="20px" height="20px">
+            <path d="M3 0A1 1 0 003 6 1 1 0 003 0V.5A1 1 0 013 5.5 1 1 0 013 .5V0" fill="var(--theme-iconStroke)" />
+            <path d="M3 .5A1 1 0 003 5.5 1 1 0 003 .5" fill="#000" />
           </svg>
         </div>
         <div class="themeCont systemTheme">
           <input type="radio" name="System Theme" id="systemTheme" class="themeInp systemTheme">
           <p>System Default</p>
-          <svg width="20" height="20" viewBox="0 0 7 7" focusable="false" aria-hidden="true" role="img" style="fill: var(--docum-theme);" class="mainToolbarImage">
-              <g>
-                <path d="M3 0A1 1 0 003 6V5.5A1 1 0 013 .5V0" fill="var(--theme-iconStroke)">
-                </path>
-                <path d="M3 .5A1 1 0 003 5.5V.5" fill="#fff">
-                </path>
-                <path d="M3 0A1 1 0 013 6V5.5A1 1 0 003 .5V0" fill="var(--theme-iconStroke)">
-                </path>
-                <path d="M3 .5A1 1 0 013 5.5V.5" fill="#000">
-                </path>
-              </g>
-            </svg>
+          <svg width="20" height="20" viewBox="0 0 7 7" focusable="false" aria-hidden="true" role="img"
+            style="fill: var(--docum-theme);" class="mainToolbarImage">
+            <g>
+              <path d="M3 0A1 1 0 003 6V5.5A1 1 0 013 .5V0" fill="var(--theme-iconStroke)">
+              </path>
+              <path d="M3 .5A1 1 0 003 5.5V.5" fill="#fff">
+              </path>
+              <path d="M3 0A1 1 0 013 6V5.5A1 1 0 003 .5V0" fill="var(--theme-iconStroke)">
+              </path>
+              <path d="M3 .5A1 1 0 013 5.5V.5" fill="#000">
+              </path>
+            </g>
+          </svg>
         </div>
       </div>
       <div id="tiMDv" class="timDv hidden">
-		<div class="timDv2">
-			<div class="timDv3" style="opacity:1;">
-				<div class="timDv4 hidden" id="shoTmI">
-					<div id="hrsSho">00</div>
-					<div>:</div>
-					<div id="minSho">00</div>
-					<div>:</div>
-					<div id="secSho">00</div>
-				</div>
-				<div class="timDv4" style="column-gap:2px;z-index:5;" id="inpTmI">
-					<input type="number" min="0" max="24" value="00" class="inpTm" name="hr" id="tmHr" oninput="validity.valid||(value='');">
-					<div>:</div>
-					<input type="number" min="0" max="60" value="00" class="inpTm" name="min" id="tmMn" oninput="validity.valid||(value='');">
-					<div>:</div>
-					<input type="number" min="1" max="59" value="01" class="inpTm" name="sec" id="tmSc" oninput="validity.valid||(value='');">
-				</div>
-				<div class="timDv4 timDv5">
-					<div>hr</div>
-					<div>min</div>
-					<div>sec</div>
-				</div>
-			</div>
-			<svg width="240" height="240" viewBox="0 0 240 240" style="position:absolute;">
-                <circle cx="120" cy="120" r="112" stroke-width="16px" class="sc-pYA-dN bsRGkV"></circle>
-                <circle id="timerCir" cx="120" cy="120" r="112" stroke-width="16px" transform="rotate(-90 120 120)" class="sc-oUcyK eOPyHF" style="stroke-dasharray: 703.717; stroke-dashoffset: 703;"></circle>
-            </svg>
-		</div>
-		<div class="timDv6">
-			<button class="rstB hidden" id="rstBtn">Reset</button>
-			<button class="rstB PauB hidden" id="pausBtn" name="Pause">Pause</button>
-			<button class="rstB PauB hidden" id="resmBtn">Resume</button>
-			<button class="rstB PauB" id="strtBtn">Start</button>
-		</div>
-    <button class="toolbarButton" id="pipBtn" title="Picture In Picture" style="position:absolute;top:10px;right:10px;">
-      <svg width="22px" height="18px" viewBox="6.5 6 21.5 21.5">
-        <path d="M25,17 L17,17 L17,23 L25,23 L25,17 L25,17 Z M29,25 L29,10.98 C29,9.88 28.1,9 27,9 L9,9 C7.9,9 7,9.88 7,10.98 L7,25 C7,26.1 7.9,27 9,27 L27,27 C28.1,27 29,26.1 29,25 L29,25 Z M27,25.02 L9,25.02 L9,10.97 L27,10.97 L27,25.02 L27,25.02 Z" fill="var(--docum-theme)"></path>
-      </svg>
-    </button>
-    <button class="toolbarButton" id="fullScr" title="Full Screen" style="position:absolute;top:45px;right:10px;" disabled>
-      <svg viewBox="0 0 36 36" style="fill: var(--docum-theme);">
-        <g>
-          <path d="m 10,16 2,0 0,-4 4,0 0,-2 L 10,10 l 0,6 0,0 z"></path>
-        </g>
-        <g>
-          <path d="m 20,10 0,2 4,0 0,4 2,0 L 26,10 l -6,0 0,0 z"></path>
-        </g>
-        <g>
-          <path d="m 24,24 -4,0 0,2 L 26,26 l 0,-6 -2,0 0,4 0,0 z"></path>
-        </g>
-        <g>
-          <path d="M 12,20 10,20 10,26 l 6,0 0,-2 -4,0 0,-4 0,0 z"></path>
-        </g>
-      </svg>
-    </button>
-	</div>
-  <div class="timDv2 hidden" id="pipDiv">
-    <div class="timDv3">
-      <div class="timDv4">
-					<div id="hrsSho2">00</div>
-					<div>:</div>
-					<div id="minSho2">00</div>
-					<div>:</div>
-					<div id="secSho2">00</div>
-				</div>
-        <div class="timDv4 timDv5">
-					<div>hr</div>
-					<div>min</div>
-					<div>sec</div>
-				</div>
-    </div>
-    <svg width="240" height="240" viewBox="0 0 240 240" style="position:absolute;">
-                <circle cx="120" cy="120" r="112" stroke-width="16px" class="sc-pYA-dN bsRGkV"></circle>
-                <circle id="timerCir2" cx="120" cy="120" r="112" stroke-width="16px" transform="rotate(-90 120 120)" class="sc-oUcyK eOPyHF" style="stroke-dasharray: 703.717; stroke-dashoffset: 0.0245815;"></circle>
-            </svg>
-  </div>
+        <div class="timDv2">
+          <div class="timDv3" style="opacity:1;">
+            <div class="timDv4 hidden" id="shoTmI">
+              <div id="hrsSho">00</div>
+              <div>:</div>
+              <div id="minSho">00</div>
+              <div>:</div>
+              <div id="secSho">00</div>
+            </div>
+            <div class="timDv4" style="column-gap:2px;z-index:5;" id="inpTmI">
+              <input type="number" min="0" max="24" value="00" class="inpTm" name="hr" id="tmHr"
+                oninput="validity.valid||(value='');">
+              <div>:</div>
+              <input type="number" min="0" max="60" value="00" class="inpTm" name="min" id="tmMn"
+                oninput="validity.valid||(value='');">
+              <div>:</div>
+              <input type="number" min="1" max="59" value="01" class="inpTm" name="sec" id="tmSc"
+                oninput="validity.valid||(value='');">
+            </div>
+            <div class="timDv4 timDv5">
+              <div>hr</div>
+              <div>min</div>
+              <div>sec</div>
+            </div>
+          </div>
+          <svg width="240" height="240" viewBox="0 0 240 240" style="position:absolute;">
+            <circle cx="120" cy="120" r="112" stroke-width="16px" class="sc-pYA-dN bsRGkV"></circle>
+            <circle id="timerCir" cx="120" cy="120" r="112" stroke-width="16px" transform="rotate(-90 120 120)"
+              class="sc-oUcyK eOPyHF" style="stroke-dasharray: 703.717; stroke-dashoffset: 703;"></circle>
+          </svg>
+        </div>
+        <div class="timDv6">
+          <button class="rstB hidden" id="rstBtn">Reset</button>
+          <button class="rstB PauB hidden" id="pausBtn" name="Pause">Pause</button>
+          <button class="rstB PauB hidden" id="resmBtn">Resume</button>
+          <button class="rstB PauB" id="strtBtn">Start</button>
+        </div>
+        <button class="toolbarButton" id="pipBtn" title="Picture In Picture"
+          style="position:absolute;top:10px;right:10px;">
+          <svg width="22px" height="18px" viewBox="6.5 6 21.5 21.5">
+            <path
+              d="M25,17 L17,17 L17,23 L25,23 L25,17 L25,17 Z M29,25 L29,10.98 C29,9.88 28.1,9 27,9 L9,9 C7.9,9 7,9.88 7,10.98 L7,25 C7,26.1 7.9,27 9,27 L27,27 C28.1,27 29,26.1 29,25 L29,25 Z M27,25.02 L9,25.02 L9,10.97 L27,10.97 L27,25.02 L27,25.02 Z"
+              fill="var(--docum-theme)"></path>
+          </svg>
+        </button>
+        <button class="toolbarButton" id="fullScr" title="Full Screen" style="position:absolute;top:45px;right:10px;"
+          disabled>
+          <svg style="fill: var(--docum-theme);" width="33px" height="33px">
+            <use xlink:href="#fullScrIcon" />
+          </svg>
+        </button>
+      </div>
+      <div class="timDv2 hidden" id="pipDiv">
+        <div class="timDv3">
+          <div class="timDv4">
+            <div id="hrsSho2">00</div>
+            <div>:</div>
+            <div id="minSho2">00</div>
+            <div>:</div>
+            <div id="secSho2">00</div>
+          </div>
+          <div class="timDv4 timDv5">
+            <div>hr</div>
+            <div>min</div>
+            <div>sec</div>
+          </div>
+        </div>
+        <svg width="240" height="240" viewBox="0 0 240 240" style="position:absolute;">
+          <circle cx="120" cy="120" r="112" stroke-width="16px" class="sc-pYA-dN bsRGkV"></circle>
+          <circle id="timerCir2" cx="120" cy="120" r="112" stroke-width="16px" transform="rotate(-90 120 120)"
+            class="sc-oUcyK eOPyHF" style="stroke-dasharray: 703.717; stroke-dashoffset: 0.0245815;"></circle>
+        </svg>
+      </div>
       <div id="editorFreeTextParamsToolbar" class="editorParamsToolbar hidden doorHangerRight">
         <div class="editorParamsToolbarContainer">
           <div class="editorParamsSetter">
@@ -471,14 +534,9 @@
               </button>
               <button id="viewFind" class="toolbarButton" title="Find in Document" tabindex="12" data-l10n-id="findbar"
                 aria-expanded="false" aria-controls="findbar">
-                <svg width="18" height="18" viewBox="0 0 18 18" focusable="false" aria-hidden="true" role="img"
+                <svg width="18" height="18" focusable="false" aria-hidden="true" role="img"
                   style="fill: var(--docum-theme);" class="mainToolbarImage">
-                  <g>
-                    <path
-                      d="M17.247,16.18649l-4.33492-4.33493a6.26629,6.26629,0,1,0-1.06055,1.06055l4.335,4.33489a.5.5,0,0,0,.7071,0l.35344-.35344A.5.5,0,0,0,17.247,16.18649ZM8,12.75A4.75,4.75,0,1,1,12.75,8,4.75,4.75,0,0,1,8,12.75Z">
-                    </path>
-
-                  </g>
+                  <use xlink:href="#findIcon" />
                 </svg>
               </button>
               <div class="splitToolbarButton hiddenSmallView">
@@ -525,35 +583,25 @@
                 <button id="openFile" class="toolbarButton hiddenLargeView" title="Open File" tabindex="31"
                   data-l10n-id="open_file">
                   <svg class="toolbarButtonImage mainToolbarImage" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="-0.0133 -0.1182 19.96 13.15">
-                    <path
-                      d="M14.722 2.6618H8.097Q7.7591 1.0769 6.0108 1.0475H2.235Q.7071 1.1062.4867 2.737V10.9791Q.6336 12.5364 1.9853 12.5364H15.1343Q15.8689 12.5071 16.1628 11.5962L18.3371 6.1309C18.5428 5.5579 18.1608 5.0437 17.0149 5.0143H4.806C3.998 4.9996 3.807 5.4551 3.4985 6.1015L.9232 12.1391M15.0398 9.054C13.1331 4.7591 16.8726 2.482 19.4458 1.3527M18.7829 3.747 19.446 1.3529 16.9258.3818"
-                      stroke="var(--docum-theme)" stroke-width="1" fill="none" />
+                    style="stroke: var(--docum-theme);">
+                    <use xlink:href="#openFileIcon" />
                   </svg>
                 </button>
 
                 <button id="print" class="toolbarButton hiddenMediumView" title="Print" tabindex="32"
                   data-l10n-id="print">
                   <svg class="toolbarButtonImage mainToolbarImage" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="-0.2203 0.1942 19.44 18.63">
-                    <path d="M14.6644 5.5434V.6942H4.2474V5.5235" fill="none" stroke-width="1"
-                      stroke="var(--docum-theme)" stroke-linejoin="round" />
-                    <path
-                      d="M1.5244 5.5162Q.3686 5.5192.2797 6.487V14.1332Q.3483 15.0897 1.3935 15.1507H4.2285V11.5224H14.687V15.1507H17.5403Q18.6494 15.0284 18.716 13.9987V6.6928Q18.6412 5.548 17.6338 5.5162H1.5344M15.8986 7.5559A.5.5 0 0115.8986 9.1607.5.5 0 0115.8986 7.5559"
-                      fill="var(--docum-theme)" />
-                    <path
-                      d="M4.2281 11.5225V18.3284H14.687V11.5212M6.1496 13.1098H12.8059M6.0902 14.7472H11.2516M6.1021 16.3608H12.9008"
-                      fill="none" stroke-width="1" stroke="var(--docum-theme)" stroke-linecap="round" />
+                    style="fill: var(--docum-theme);">
+                    <use xlink:href="#printFileIcon" />
                   </svg>
                 </button>
 
                 <button id="download" class="toolbarButton hiddenMediumView" title="Save" tabindex="33"
                   data-l10n-id="save">
-                  <svg class="toolbarButtonImage mainToolbarImage" xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0.5 0.5 18.281 16.7">
+                  <svg class="toolbarButtonImage mainToolbarImage" xmlns="http://www.w3.org/2000/svg">
                     <path
-                      d="M1.7386.8415Q.8343.83.8458 1.6084V15.9484Q.8707 16.8474 1.6734 16.8477H17.7178Q18.4603 16.839 18.4603 16.0325V3.0058Q18.4459 2.4719 17.7969 2.4719H6.9519Q6.5783 2.4441 6.4035 2.1368L5.7588 1.1788Q5.5238.8353 4.9996.8415H1.7398M.8457 5.1357Q1.0009 4.4797 1.6974 4.4717H17.7173Q18.248 4.5385 18.4595 5.2098M9.6512 6.6827V12.754M7.5459 10.7574 9.6512 12.8219 11.7293 10.7438M5.5085 14.4382H13.821"
-                      stroke="var(--docum-theme)" stroke-width="1" fill="none" stroke-linecap="round" />
+                      d="M3.333 14.167V15.833C3.333 16.753 4.08 17.5 5 17.5H15C15.92 17.5 16.667 16.754 16.667 15.833V14.167M5.833 9.167 10 13.333 14.167 9.167M10 3.333V13.333"
+                      fill="none" stroke-width="1.25" stroke="var(--docum-theme)" />
                   </svg>
                 </button>
               </div>
@@ -567,35 +615,23 @@
           </div>
         </div>
         <div class="mainToolbar">
-        <div style="position:absolute;top:10px;display: flex;gap: 10px;flex-direction: column;">
-          <div class="toolbarButton writtenTool" title="Edit PDF" id="editPDFCon">
-            Edit</div>
-          <button id="changeTheme" class="toolbarButton" title="Theme" tabindex="22">
-            <svg width="18" height="18" viewBox="0 0 7 7" focusable="false" aria-hidden="true" role="img"
-              style="fill: var(--docum-theme);" class="mainToolbarImage">
-              <g>
-                <path
-                  d="M3 0A1 1 0 003 6V5.5A1 1 0 013 .5V0" fill="var(--theme-iconStroke)">
-                </path>
-                <path
-                  d="M3 .5A1 1 0 003 5.5V.5" fill="#fff">
-                </path>
-                <path
-                  d="M3 0A1 1 0 013 6V5.5A1 1 0 003 .5V0" fill="var(--theme-iconStroke)">
-                </path>
-                <path
-                  d="M3 .5A1 1 0 013 5.5V.5" fill="#000">
-                </path>
-              </g>
-            </svg>
-          </button>
-          <button id="TimerBtn" class="toolbarButton" title="Timer" tabindex="22">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none" stroke="var(--docum-theme)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" size="20px">
+          <div style="position:absolute;top:10px;display: flex;gap: 10px;flex-direction: column;">
+            <div class="toolbarButton writtenTool" title="Edit PDF" id="editPDFCon">
+              Edit</div>
+            <button id="changeTheme" class="toolbarButton" title="Theme" tabindex="22">
+              <svg width="18" height="18" focusable="false" aria-hidden="true" role="img"
+                style="stroke: var(--docum-theme);" class="mainToolbarImage">
+                <use xlink:href="#themeIcon" />
+              </svg>
+            </button>
+            <button id="TimerBtn" class="toolbarButton" title="Timer" tabindex="22">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                stroke="var(--docum-theme)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" size="20px">
                 <line x1="10" x2="14" y1="2" y2="2"></line>
                 <line x1="12" x2="15" y1="14" y2="11"></line>
                 <circle cx="12" cy="14" r="8"></circle>
-            </svg>
-          </button>
+              </svg>
+            </button>
           </div>
           <button id="zoomIn" class="toolbarButton" title="Zoom In" tabindex="22" data-l10n-id="zoom_in">
             <svg width="18" height="18" viewBox="0 0 18 18" focusable="false" aria-hidden="true" role="img"
@@ -623,56 +659,39 @@
           </button>
           <div class="splitToolbarButtonSeparator"></div>
           <button class="toolbarButton" title="Previous Page" id="previous" tabindex="13" data-l10n-id="previous">
-            <svg class="mainToolbarImage" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-              fill="none">
-              <path
-                d="M8.35179 5.001L13.8178 10.466C13.876 10.524 13.9222 10.5929 13.9537 10.6688C13.9852 10.7447 14.0013 10.826 14.0012 10.9082C14.0011 10.9904 13.9848 11.0717 13.9531 11.1475C13.9215 11.2234 13.8751 11.2922 13.8168 11.35C13.6991 11.4668 13.5401 11.5324 13.3743 11.5324C13.2085 11.5324 13.0494 11.4668 12.9318 11.35L7.99879 6.416L3.06679 11.349C2.94842 11.4614 2.79085 11.5231 2.62765 11.521C2.46445 11.5189 2.30853 11.4531 2.19312 11.3377C2.07771 11.2223 2.01193 11.0663 2.00982 10.9031C2.0077 10.7399 2.06941 10.5824 2.18179 10.464L7.64779 5L8.35179 5.001Z"
-                fill="var(--docum-theme)" />
+            <svg class="mainToolbarImage" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+              fill="var(--docum-theme)" style="transform: rotate(180deg);">
+              <use xlink:href="#arrowIcon" />
             </svg>
           </button>
           <input type="number" id="pageNumber" class="toolbarField toolbarButton" title="Page" value="1" min="1"
             tabindex="15" data-l10n-id="page" autocomplete="off">
           <span id="numPages" class="toolbarLabel"></span>
           <button class="toolbarButton" title="Next Page" id="next" tabindex="14" data-l10n-id="next">
-            <svg class="mainToolbarImage" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-              fill="none">
-              <path
-                d="M8.35176 10.9989L13.8178 5.53391C13.876 5.47594 13.9222 5.40702 13.9537 5.33113C13.9851 5.25524 14.0013 5.17387 14.0012 5.0917C14.0011 5.00954 13.9848 4.9282 13.9531 4.85238C13.9215 4.77656 13.8751 4.70775 13.8168 4.64991C13.6991 4.53309 13.5401 4.46753 13.3743 4.46753C13.2085 4.46753 13.0494 4.53309 12.9318 4.64991L7.99776 9.58491L3.06776 4.65091C2.9494 4.53853 2.79183 4.47682 2.62863 4.47894C2.46542 4.48106 2.3095 4.54683 2.19409 4.66224C2.07868 4.77765 2.01291 4.93357 2.01079 5.09677C2.00868 5.25997 2.07039 5.41754 2.18276 5.53591L7.64776 10.9999L8.35176 10.9989Z"
-                fill="var(--docum-theme)" />
+            <svg class="mainToolbarImage" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+              fill="var(--docum-theme)">
+              <use xlink:href="#arrowIcon" />
             </svg>
           </button>
           <div class="splitToolbarButtonSeparator"></div>
           <button id="pageRotateCw" class="toolbarButton" title="Rotate Clockwise" tabindex="58"
             data-l10n-id="page_rotate_cw">
-            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" role="none"
-              style="pointer-events: none; display: block; width: 18px;; height: 18px;fill:var(--docum-theme);transform:scaleX(-1);">
-              <g>
-                <path d="M0 0h24v24H0z" fill="none"></path>
-                <path
-                  d="M7.34 6.41L.86 12.9l6.49 6.48 6.49-6.48-6.5-6.49zM3.69 12.9l3.66-3.66L11 12.9l-3.66 3.66-3.65-3.66zm15.67-6.26C17.61 4.88 15.3 4 13 4V.76L8.76 5 13 9.24V6c1.79 0 3.58.68 4.95 2.05 2.73 2.73 2.73 7.17 0 9.9C16.58 19.32 14.79 20 13 20c-.97 0-1.94-.21-2.84-.61l-1.49 1.49C10.02 21.62 11.51 22 13 22c2.3 0 4.61-.88 6.36-2.64 3.52-3.51 3.52-9.21 0-12.72z">
-                </path>
-              </g>
+            <svg preserveAspectRatio="xMidYMid meet" focusable="false" role="none"
+              style=" width: 18px;; height: 18px;fill:var(--docum-theme);transform:scaleX(-1);">
+              <use xlink:href="#rotateIcon" />
             </svg>
           </button>
           <button id="pageRotateCcw" class="toolbarButton" title="Rotate Counterclockwise" tabindex="59"
             data-l10n-id="page_rotate_ccw">
-            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" role="none"
-              style="pointer-events: none; display: block; width: 18px; height: 18px;fill:var(--docum-theme);">
-              <g>
-                <path d="M0 0h24v24H0z" fill="none"></path>
-                <path
-                  d="M7.34 6.41L.86 12.9l6.49 6.48 6.49-6.48-6.5-6.49zM3.69 12.9l3.66-3.66L11 12.9l-3.66 3.66-3.65-3.66zm15.67-6.26C17.61 4.88 15.3 4 13 4V.76L8.76 5 13 9.24V6c1.79 0 3.58.68 4.95 2.05 2.73 2.73 2.73 7.17 0 9.9C16.58 19.32 14.79 20 13 20c-.97 0-1.94-.21-2.84-.61l-1.49 1.49C10.02 21.62 11.51 22 13 22c2.3 0 4.61-.88 6.36-2.64 3.52-3.51 3.52-9.21 0-12.72z">
-                </path>
-              </g>
+            <svg preserveAspectRatio="xMidYMid meet" focusable="false" role="none"
+              style="width: 18px; height: 18px;fill:var(--docum-theme);">
+              <use xlink:href="#rotateIcon" />
             </svg>
           </button>
           <button id="presentationMode" class="toolbarButton" title="Switch to Presentation Mode" tabindex="54"
             data-l10n-id="presentation_mode">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.4 0.4 19.3 19.3"
-              style="stroke-linecap: round;stroke-linejoin:round;width:16px;stroke-width:2;">
-              <path
-                d="M6.9698 1.0091H.9865V6.9924M1.003 13.0578V19.1394H6.9207M12.9859 19.1394H19.084V13.1233M19.084 7.0417V1.042H13.0515"
-                stroke="var(--docum-theme)" fill="none" />
+            <svg xmlns="http://www.w3.org/2000/svg" style="fill: var(--docum-theme);" width="33px" height="33px">
+              <use xlink:href="#fullScrIcon" />
             </svg>
           </button>
           <button id="secondaryToolbarToggle" class="toolbarButton" title="Tools" tabindex="48" data-l10n-id="tools"
@@ -805,11 +824,17 @@
       </dialog>
       <div id="DevIntro" class="DevIntro hidden">
         <dialog open class="dialogCom">
-          <div style="align-self:start;">Copyright <span>&#169</span>2023-present <a href="https://github.com/XandrChris" target="_blank"><b>Xander Christopher</b></a></div>
-          <div>This project is Open Source, so anyone can use the code<br> as per the <a href="https://github.com/XandrChris/PDFViewer/blob/main/LICENSE" target="_blank"><b>LICENSE</b></a> available in the github repo.</div>
-          <a href="https://github.com/XandrChris/PDFViewer" target="_blank" style="margin:5px 10px;align-self:start;" title="Github Link">
+          <div style="align-self:start;">Copyright <span>&#169</span>2023-present <a
+              href="https://github.com/XandrChris" target="_blank"><b>Xander Christopher</b></a></div>
+          <div>This project is Open Source, so anyone can use the code<br> as per the <a
+              href="https://github.com/XandrChris/PDFViewer/blob/main/LICENSE" target="_blank"><b>LICENSE</b></a>
+            available in the github repo.</div>
+          <a href="https://github.com/XandrChris/PDFViewer" target="_blank" style="margin:5px 10px;align-self:start;"
+            title="Github Link">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 100 100">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="var(--docum-theme)"/>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+                fill="var(--docum-theme)" />
             </svg>
           </a>
           <button id="DevIntroClose" class="dialogButton">
